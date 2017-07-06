@@ -1,0 +1,10 @@
+export declare const Topic = "<https://knowledge.express/Topic>";
+export declare const next = "<https://knowledge.express/next>";
+export declare const previous = "<https://knowledge.express/previous>";
+export declare const child = "<https://knowledge.express/child>";
+export declare const parent = "<https://knowledge.express/parent>";
+export declare const resource = "<https://knowledge.express/resource>";
+export declare const Resource = "<https://knowledge.express/Resource>";
+export declare const topic = "<https://knowledge.express/topic>";
+export declare const entity = "<https://knowledge.express/entity>";
+export declare const Entity = "<https://knowledge.express/Entity>";

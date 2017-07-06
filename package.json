@@ -1,0 +1,18 @@
+{
+  "name": "feedbackfruits-knowledge-context",
+  "version": "1.0.0",
+  "description": "Shared context for FeedbackFruits Knowledge",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Steffan Sluis <steffansluis@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "dist": "npm run lint && tsc"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.8",
+    "typescript": "^2.4.1"
+  },
+  "repository": "git@github.com:feedbackfruits/feedbackfruits-knowledge-context.git"
+}
