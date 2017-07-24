@@ -1,0 +1,32 @@
+@prefix : <https://knowledge.express#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Resource
+  a owl:Class ;
+  rdfs:subClassOf :Thing ;
+  rdfs:label "Resource"@en ;
+  rdfs:comment "A Resource about entities related to topics."@en .
+
+# :message
+#   a owl:DatatypeProperty, owl:FunctionalProperty ;
+#   rdfs:label "Message"@en ;
+#   rdfs:comment "The content of a comment."@en ;
+#   rdfs:domain :Resource ;
+#   rdfs:range xsd:string .
+
+:entities
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label "Resources on"@en ;
+  rdfs:comment "The topic of the discussion the Resource belongs to."@en ;
+  rdfs:domain :Resource ;
+  rdfs:range :Entity ;
+  owl:inverseOf :about .
+
+# :repliesToResource
+#   a owl:ObjectProperty, owl:FunctionalProperty ;
+#   rdfs:label "Replies to comment"@en ;
+#   rdfs:comment "The Resource this Resource replies to."@en ;
+#   rdfs:domain :Resource ;
+#   rdfs:range :Resource .
