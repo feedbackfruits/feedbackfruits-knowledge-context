@@ -15,14 +15,14 @@
         "noLib": false,
         "preserveConstEnums": true,
         "suppressImplicitAnyIndexErrors": true,
-        "outDir": "dist"
+        "outDir": "lib"
     },
     "filesGlob": [
       "src/**/*.ts"
     ],
     "exclude": [
       "node_modules",
-      "dist"
+      "lib"
     ],
     "compileOnSave": true,
     "buildOnSave": false,

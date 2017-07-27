@@ -2,16 +2,26 @@
   "name": "feedbackfruits-knowledge-context",
   "version": "1.0.0",
   "description": "Shared context for FeedbackFruits Knowledge",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "Steffan Sluis <steffansluis@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "dist": "npm run lint && tsc"
+    "build": "tsc",
+    "clean": "rm -rf lib",
+    "lint": "tslint -c tslint.json -p tsconfig.json --type-check -t codeFrame 'src/**/*.ts'",
+    "lint-fix": "tslint -c tslint.json 'src/**/*.ts' --fix",
+    "prestart": "npm run lint && npm run build",
+    "start": "node lib",
+    "pretest": "npm run clean && tsc --inlineSourceMap",
+    "test": "nyc ava",
+    "watch-test": "nodemon -w test -x 'npm run test'",
+    "coverage": "codecov",
+    "watch": "nodemon lib"
   },
   "dependencies": {
     "@types/node": "^8.0.8",
+    "tslint": "^5.5.0",
     "typescript": "^2.4.1"
   },
   "repository": "git@github.com:feedbackfruits/feedbackfruits-knowledge-context.git"
