@@ -10,6 +10,12 @@
   rdfs:label "Resource"@en ;
   rdfs:comment "A Resource about entities related to topics."@en .
 
+:topic
+  a owl:ObjectProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range :Topic ;
+  owl:inverseOf :resource .
+
 # :message
 #   a owl:DatatypeProperty, owl:FunctionalProperty ;
 #   rdfs:label "Message"@en ;
