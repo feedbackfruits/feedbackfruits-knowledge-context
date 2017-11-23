@@ -1,0 +1,19 @@
+@prefix : <https://knowledge.express/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Entity
+  a owl:Class ;
+  rdfs:subClassOf :Thing ;
+  rdfs:label "Entity"@en ;
+  rdfs:comment "A Entity about a topic."@en .
+
+schema:subjectOf
+  a owl:ObjectProperty ;
+  rdfs:label "Resources on"@en ;
+  rdfs:comment "The topic of the discussion the Resource belongs to."@en ;
+  rdfs:domain :Entity ;
+  rdfs:range :CreativeWork ;
+  owl:inverseOf schema:about .
