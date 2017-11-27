@@ -1,0 +1,33 @@
+:Topic
+  a owl:Class ;
+  rdfs:subClassOf :CreativeWork .
+
+:resource
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Resource ;
+  owl:inverseOf :topic .
+
+:previous
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Topic ;
+  owl:inverseOf :next .
+
+:next
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Topic ;
+  owl:inverseOf :previous .
+
+:parent
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Topic ;
+  owl:inverseOf :child .
+
+:child
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Topic ;
+  owl:inverseOf :parent .
