@@ -1,0 +1,42 @@
+mag:FieldOfStudy
+  a owl:Class ;
+  rdfs:subClassOf :CreativeWork, owl:Thing .
+
+# schema:sameAs
+#   a owl:ObjectProperty ;
+#   rdfs:domain mag:FieldOfStudy ;
+#   rdfs:range rdfs:Resource ;
+#   owl:inverseOf schema:sameAs .
+
+schema:name
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Entity ;
+  rdfs:range xsd:string .
+
+schema:description
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Entity ;
+  rdfs:range xsd:string .
+
+schema:image
+  a owl:ObjectProperty ;
+  rdfs:domain :CreativeWork ;
+  rdfs:range xsd:string .
+
+:resource
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range :Resource ;
+  owl:inverseOf :topic .
+
+mag:parentFieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf mag:childFieldOfStudy .
+
+mag:childFieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf mag:parentFieldOfStudy .

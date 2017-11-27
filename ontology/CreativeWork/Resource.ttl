@@ -1,0 +1,9 @@
+:Resource
+  a owl:Class ;
+  rdfs:subClassOf :CreativeWork .
+
+:topic
+  a owl:ObjectProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range :Topic ;
+  owl:inverseOf :resource .
