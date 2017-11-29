@@ -21,5 +21,5 @@ schema:description
 schema:subjectOf
   a owl:ObjectProperty ;
   rdfs:domain :Entity ;
-  rdfs:range :CreativeWork ;
+  rdfs:range schema:CreativeWork ;
   owl:inverseOf schema:about .
