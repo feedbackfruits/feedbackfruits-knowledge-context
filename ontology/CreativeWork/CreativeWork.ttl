@@ -1,39 +1,39 @@
-:CreativeWork
+schema:CreativeWork
   a owl:Class ;
   rdfs:subClassOf owl:Thing .
 
 schema:name
   a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain :CreativeWork ;
+  rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .
 
 schema:description
   a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain :CreativeWork ;
+  rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .
 
 schema:image
   a owl:ObjectProperty ;
-  rdfs:domain :CreativeWork ;
+  rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .
 
 schema:license
   a owl:ObjectProperty ;
-  rdfs:domain :CreativeWork ;
+  rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .
 
 schema:sourceOrganization
   a owl:ObjectProperty ;
-  rdfs:domain :CreativeWork ;
+  rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .
 
 schema:text
   a owl:ObjectProperty ;
-  rdfs:domain :CreativeWork ;
+  rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .
 
 schema:about
   a owl:ObjectProperty ;
-  rdfs:domain :CreativeWork ;
+  rdfs:domain schema:CreativeWork ;
   rdfs:range :Entity ;
   owl:inverseOf schema:subjectOf .

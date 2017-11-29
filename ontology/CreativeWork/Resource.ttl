@@ -1,6 +1,6 @@
 :Resource
   a owl:Class ;
-  rdfs:subClassOf :CreativeWork .
+  rdfs:subClassOf schema:CreativeWork .
 
 :topic
   a owl:ObjectProperty ;

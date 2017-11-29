@@ -1,6 +1,6 @@
 mag:FieldOfStudy
   a owl:Class ;
-  rdfs:subClassOf :CreativeWork, owl:Thing .
+  rdfs:subClassOf schema:CreativeWork, owl:Thing .
 
 # schema:sameAs
 #   a owl:ObjectProperty ;
@@ -20,7 +20,7 @@ schema:description
 
 schema:image
   a owl:ObjectProperty ;
-  rdfs:domain :CreativeWork ;
+  rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .
 
 :resource
