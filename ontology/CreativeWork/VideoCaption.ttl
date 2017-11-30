@@ -1,5 +1,5 @@
 :VideoCaption
-  a owl:Class
+  a owl:Class ;
   rdfs:subClassOf schema:CreativeWork .
 
 :captionOf  a
@@ -11,9 +11,9 @@
 :startsAfter
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :VideoCaption ;
-  rdfs:range xsd:duration ;
+  rdfs:range xsd:duration .
 
 :duration
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :VideoCaption ;
-  rdfs:range xsd:duration ;
+  rdfs:range xsd:duration .
