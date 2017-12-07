@@ -1,21 +1,22 @@
 mag:FieldOfStudy
   a owl:Class ;
-  rdfs:subClassOf schema:CreativeWork, owl:Thing .
+  rdfs:subClassOf owl:Thing .
 
-# schema:sameAs
-#   a owl:ObjectProperty ;
-#   rdfs:domain mag:FieldOfStudy ;
-#   rdfs:range rdfs:Resource ;
-#   owl:inverseOf schema:sameAs .
+:entity
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:sameAs ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range :Entity ;
+  owl:inverseOf :fieldOfStudy .
 
 schema:name
   a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain :Entity ;
+  rdfs:domain mag:FieldOfStudy ;
   rdfs:range xsd:string .
 
 schema:description
   a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain :Entity ;
+  rdfs:domain mag:FieldOfStudy ;
   rdfs:range xsd:string .
 
 schema:image

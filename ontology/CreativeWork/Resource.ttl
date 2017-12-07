@@ -7,3 +7,10 @@
   rdfs:domain :Resource ;
   rdfs:range :Topic ;
   owl:inverseOf :resource .
+
+:about
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf schema:about ;
+  rdfs:domain :Resource ;
+  rdfs:range :Entity ;
+  owl:inverseOf :subjectOf .

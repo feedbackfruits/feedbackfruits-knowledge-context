@@ -2,11 +2,19 @@
   a owl:Class ;
   rdfs:subClassOf owl:Thing .
 
-# schema:sameAs
-#   a owl:ObjectProperty ;
-#   rdfs:domain :Entity ;
-#   rdfs:range mag:FieldOfStudy, owl:Thing, rdfs:Resource ;
-#   owl:inverseOf schema:sameAs .
+:fieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:sameAs ;
+  rdfs:domain :Entity ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf :entity .
+
+:subjectOf
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf schema:subjectOf ;
+  rdfs:domain :Entity ;
+  rdfs:range :Resource ;
+  owl:inverseOf :about .
 
 schema:name
   a owl:ObjectProperty, owl:FunctionalProperty ;
@@ -17,9 +25,3 @@ schema:description
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :Entity ;
   rdfs:range xsd:string .
-
-schema:subjectOf
-  a owl:ObjectProperty ;
-  rdfs:domain :Entity ;
-  rdfs:range schema:CreativeWork ;
-  owl:inverseOf schema:about .
