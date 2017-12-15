@@ -1,6 +1,6 @@
 :Document
   a owl:Class ;
-  rdfs:subClassOf schema:CreativeWork, schema:DigitalDocument .
+  rdfs:subClassOf :Resource, :Taggable .
 
 :section
   a owl:ObjectProperty ;

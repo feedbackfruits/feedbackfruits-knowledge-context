@@ -1,9 +1,9 @@
 :Video
   a owl:Class ;
-  rdfs:subClassOf schema:VideoObject, rdfs:subClassOf schema:CreativeWork .
+  rdfs:subClassOf schema:VideoObject, :Resource, :Taggable .
 
 :caption
   a owl:ObjectProperty ;
   rdfs:domain :Video ;
   rdfs:range :VideoCaption ;
-  owl:inverseOf :captioOf .
+  owl:inverseOf :captionOf .
