@@ -8,6 +8,19 @@
   rdfs:range :Topic ;
   owl:inverseOf :resource .
 
+:tag
+  a owl:DatatypeProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range :Tag ;
+  owl:inverseOf :resource .
+
+:annotation
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf :tag ;
+  rdfs:domain :Resource ;
+  rdfs:range :Annotation ;
+  owl:inverseOf :resource .
+
 :about
   a owl:ObjectProperty ;
   rdfs:subPropertyOf schema:about ;

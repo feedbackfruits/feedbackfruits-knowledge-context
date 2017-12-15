@@ -9,6 +9,19 @@
   rdfs:range mag:FieldOfStudy ;
   owl:inverseOf :entity .
 
+:tag
+  a owl:DatatypeProperty ;
+  rdfs:domain :Entity ;
+  rdfs:range :Tag ;
+  owl:inverseOf :entity .
+
+:annotation
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf :tag ;
+  rdfs:domain :Entity ;
+  rdfs:range :Annotation ;
+  owl:inverseOf :entity .
+
 :subjectOf
   a owl:ObjectProperty ;
   rdfs:subPropertyOf schema:subjectOf ;

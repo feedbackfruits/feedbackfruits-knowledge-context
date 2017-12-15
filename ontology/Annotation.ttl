@@ -1,0 +1,18 @@
+:Annotation
+  a owl:Class ;
+  rdfs:subClassOf :Tag .
+
+:startPosition
+  a owl:DatatypeProperty ;
+  rdfs:domain :Annotation ;
+  rdfs:range xsd:integer .
+
+:confidence
+  a owl:DatatypeProperty ;
+  rdfs:domain :Annotation ;
+  rdfs:range xsd:decimal .
+
+:detectedAs
+  a owl:DatatypeProperty ;
+  rdfs:domain :Annotation ;
+  rdfs:range xsd:string .

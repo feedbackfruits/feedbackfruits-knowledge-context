@@ -1,0 +1,16 @@
+:Taggable
+  a owl:Class .
+
+:tag
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf schema:about ;
+  rdfs:domain :Taggable ;
+  rdfs:range :Tag ;
+  owl:inverseOf :subjectOf .
+
+:annotation
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf :tag ;
+  rdfs:domain :Taggable ;
+  rdfs:range :Annotation ;
+  owl:inverseOf :about .
