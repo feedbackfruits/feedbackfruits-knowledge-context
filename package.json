@@ -11,13 +11,7 @@
     "clean": "rm -rf lib",
     "lint": "tslint -c tslint.json -p tsconfig.json --type-check -t codeFrame 'src/**/*.ts'",
     "lint-fix": "tslint -c tslint.json 'src/**/*.ts' --fix",
-    "prestart": "npm run lint && npm run build",
-    "start": "node lib",
-    "pretest": "npm run clean && tsc --inlineSourceMap",
-    "test": "nyc ava",
-    "watch-test": "nodemon -w test -x 'npm run test'",
-    "coverage": "codecov",
-    "watch": "nodemon lib"
+    "generate-context": "rdf-to-ts ./ontology > src/ontology.ts"
   },
   "dependencies": {
     "@types/node": "^8.0.8",
@@ -25,5 +19,8 @@
     "recursive-readdir-sync": "^1.0.6",
     "typescript": "^2.4.1"
   },
-  "repository": "git@github.com:feedbackfruits/feedbackfruits-knowledge-context.git"
+  "repository": "git@github.com:feedbackfruits/feedbackfruits-knowledge-context.git",
+  "devDependencies": {
+    "rdf-to-ts": "^0.1.1"
+  }
 }
