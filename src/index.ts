@@ -12,3 +12,5 @@ const ontologyFiles = ontologyPaths.map(file => {
 export const turtle = ontologyFiles.reduce((memo, data) => {
   return memo + '\n' + data;
 }, '');
+
+export * from './ontology';
