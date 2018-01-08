@@ -1,2 +1,4 @@
 export declare const turtle: any;
-export * from './ontology';
+export * from './classes';
+export * from './iris';
+export * from './prefixes';

@@ -13,4 +13,6 @@ export const turtle = ontologyFiles.reduce((memo, data) => {
   return memo + '\n' + data;
 }, '');
 
-export * from './ontology';
+export * from './classes';
+export * from './iris';
+export * from './prefixes';

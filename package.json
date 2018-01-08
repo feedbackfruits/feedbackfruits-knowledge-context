@@ -11,7 +11,11 @@
     "clean": "rm -rf lib",
     "lint": "tslint -c tslint.json -p tsconfig.json --type-check -t codeFrame 'src/**/*.ts'",
     "lint-fix": "tslint -c tslint.json 'src/**/*.ts' --fix",
-    "generate-context": "rdf-to-ts ./ontology > src/ontology.ts"
+    "generate-context": "rdf-to-ts ./ontology > src/ontology.ts",
+    "generate-ts": "npm run generate-prefixes && npm run generate-class-types && npm run generate-iris",
+    "generate-prefixes": "rdf-to-ts -p ./ontology > src/prefixes.ts",
+    "generate-class-types": "rdf-to-ts -c ./ontology > src/classes.ts",
+    "generate-iris": "rdf-to-ts -i ./ontology > src/iris.ts"
   },
   "dependencies": {
     "@types/node": "^8.0.8",
@@ -21,6 +25,6 @@
   },
   "repository": "git@github.com:feedbackfruits/feedbackfruits-knowledge-context.git",
   "devDependencies": {
-    "rdf-to-ts": "^0.1.1"
+    "rdf-to-ts": "^0.2.0"
   }
 }

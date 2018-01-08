@@ -31,9 +31,3 @@ schema:text
   a owl:ObjectProperty ;
   rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .
-
-schema:about
-  a owl:ObjectProperty ;
-  rdfs:domain schema:CreativeWork ;
-  rdfs:range :Entity ;
-  owl:inverseOf schema:subjectOf .

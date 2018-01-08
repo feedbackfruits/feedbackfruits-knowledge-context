@@ -1,15 +1,4 @@
-export declare module prefixes {
-    const rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
-    const rdfs = "http://www.w3.org/2000/01/rdf-schema#";
-    const xsd = "http://www.w3.org/2001/XMLSchema#";
-    const owl = "http://www.w3.org/2002/07/owl#";
-    const skos = "http://www.w3.org/2004/02/skos/core#";
-    const schema = "http://schema.org/";
-    const mag = "http://academic.microsoft.com/";
-    const oa = "http://www.w3.org/ns/oa#";
-    const $ = "https://knowledge.express/";
-}
-export declare module graph {
+export declare module iris {
     module $ {
         const Annotation = "https://knowledge.express/Annotation";
         const Tag = "https://knowledge.express/Tag";
@@ -35,11 +24,11 @@ export declare module graph {
         const caption = "https://knowledge.express/caption";
         const VideoCaption = "https://knowledge.express/VideoCaption";
         const captionOf = "https://knowledge.express/captionOf";
+        const CreativeWork = "https://knowledge.express/CreativeWork";
         const startsAfter = "https://knowledge.express/startsAfter";
         const duration = "https://knowledge.express/duration";
         const fieldOfStudy = "https://knowledge.express/fieldOfStudy";
         const entity = "https://knowledge.express/entity";
-        const document = "https://knowledge.express/document";
         const score = "https://knowledge.express/score";
         const previous = "https://knowledge.express/previous";
         const next = "https://knowledge.express/next";
@@ -91,8 +80,3 @@ export declare module graph {
         const SemanticTag = "http://www.w3.org/ns/oa#SemanticTag";
     }
 }
-declare const _default: {
-    prefixes: typeof prefixes;
-    graph: typeof graph;
-};
-export default _default;

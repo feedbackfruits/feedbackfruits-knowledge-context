@@ -230,6 +230,10 @@ inherits@2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
+iri@~1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/iri/-/iri-1.1.1.tgz#5da7f70aebba4cee92758b78fafe3e2c63e0ff43"
+
 js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
@@ -286,9 +290,9 @@ pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
-rdf-to-ts@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/rdf-to-ts/-/rdf-to-ts-0.1.1.tgz#3cae3125c03553c0112bcb008b718dcec1bcff29"
+rdf-to-ts@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/rdf-to-ts/-/rdf-to-ts-0.2.0.tgz#e0b4ae96aea10208cde3488be21be91ba9715685"
   dependencies:
     "@types/commander" "^2.12.2"
     "@types/globby" "^6.1.0"
@@ -297,9 +301,16 @@ rdf-to-ts@^0.1.1:
     commander "^2.12.2"
     globby "^7.1.1"
     n3 "^0.11.2"
+    rdf "^3.0.1"
     semantic-toolkit "^0.2.1"
     typescript "^2.6.2"
     typescript-formatter "^7.0.1"
+
+rdf@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/rdf/-/rdf-3.0.1.tgz#411f5b89fd1c513e72ccf82fbb455f787da4fe4e"
+  dependencies:
+    iri "~1"
 
 recursive-readdir-sync@^1.0.6:
   version "1.0.6"

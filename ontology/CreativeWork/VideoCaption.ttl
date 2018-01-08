@@ -1,6 +1,6 @@
 :VideoCaption
   a owl:Class ;
-  rdfs:subClassOf :Taggable .
+  rdfs:subClassOf :CreativeWork, :Taggable .
 
 :captionOf  a
   owl:ObjectProperty ;

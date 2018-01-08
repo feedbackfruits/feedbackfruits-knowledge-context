@@ -21,7 +21,7 @@ schema:description
 
 schema:image
   a owl:ObjectProperty ;
-  rdfs:domain schema:CreativeWork ;
+  rdfs:domain mag:FieldOfStudy ;
   rdfs:range xsd:string .
 
 :resource
