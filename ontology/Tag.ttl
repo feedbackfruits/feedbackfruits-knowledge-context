@@ -2,10 +2,10 @@
   a owl:Class ;
   rdfs:subClassOf oa:SemanticTag .
 
-:document
+:resource
   a owl:DatatypeProperty ;
   rdfs:domain :Tag ;
-  rdfs:range :Document ;
+  rdfs:range :Resource ;
   owl:inverseOf :tag .
 
 :entity
@@ -15,6 +15,6 @@
   owl:inverseOf :tag .
 
 :score
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :Tag ;
   rdfs:range xsd:decimal .

@@ -22,13 +22,6 @@
   rdfs:range :Annotation ;
   owl:inverseOf :entity .
 
-:subjectOf
-  a owl:ObjectProperty ;
-  rdfs:subPropertyOf schema:subjectOf ;
-  rdfs:domain :Entity ;
-  rdfs:range :Resource ;
-  owl:inverseOf :about .
-
 schema:name
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :Entity ;

@@ -3,16 +3,16 @@
   rdfs:subClassOf :Tag .
 
 :startPosition
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :Annotation ;
   rdfs:range xsd:integer .
 
 :confidence
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :Annotation ;
   rdfs:range xsd:decimal .
 
 :detectedAs
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :Annotation ;
   rdfs:range xsd:string .
