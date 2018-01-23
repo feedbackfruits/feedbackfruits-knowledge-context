@@ -7,15 +7,18 @@
   "author": "Steffan Sluis <steffansluis@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
     "clean": "rm -rf lib",
-    "lint": "tslint -c tslint.json -p tsconfig.json --type-check -t codeFrame 'src/**/*.ts'",
-    "lint-fix": "tslint -c tslint.json 'src/**/*.ts' --fix",
+    "build": "npm run clean && npm run generate-from-rdf && tsc",
     "generate-context": "rdf-to-ts ./ontology > src/ontology.ts",
+    "generate-from-rdf": "npm run generate-ts && npm run generate-jsonld",
     "generate-ts": "npm run generate-prefixes && npm run generate-class-types && npm run generate-iris",
-    "generate-prefixes": "rdf-to-ts -p ./ontology > src/prefixes.ts",
-    "generate-class-types": "rdf-to-ts -c ./ontology > src/classes.ts",
-    "generate-iris": "rdf-to-ts -i ./ontology > src/iris.ts"
+    "generate-prefixes": "rdf-tools typescript -p ./ontology > src/typescript/prefixes.ts",
+    "generate-class-types": "rdf-tools typescript -c ./ontology > src/typescript/classes.ts",
+    "generate-iris": "rdf-tools typescript -i ./ontology > src/typescript/iris.ts",
+    "generate-jsonld": "npm run generate-jsonld-context",
+    "generate-jsonld-context": "rdf-tools jsonld ./ontology > src/jsonld/context.json",
+    "lint": "tslint -c tslint.json -p tsconfig.json --type-check -t codeFrame 'src/**/*.ts'",
+    "lint-fix": "tslint -c tslint.json 'src/**/*.ts' --fix"
   },
   "dependencies": {
     "@types/node": "^8.0.8",
@@ -25,6 +28,6 @@
   },
   "repository": "git@github.com:feedbackfruits/feedbackfruits-knowledge-context.git",
   "devDependencies": {
-    "rdf-to-ts": "^0.2.0"
+    "rdf-tools": "^0.4.0"
   }
 }

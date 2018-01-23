@@ -6,7 +6,6 @@ export module iris {
         export const startPosition = "https://knowledge.express/startPosition";
         export const confidence = "https://knowledge.express/confidence";
         export const detectedAs = "https://knowledge.express/detectedAs";
-        export const Entity = "https://knowledge.express/Entity";
         export const Document = "https://knowledge.express/Document";
         export const Resource = "https://knowledge.express/Resource";
         export const Taggable = "https://knowledge.express/Taggable";
@@ -19,8 +18,6 @@ export module iris {
         export const resource = "https://knowledge.express/resource";
         export const tag = "https://knowledge.express/tag";
         export const annotation = "https://knowledge.express/annotation";
-        export const about = "https://knowledge.express/about";
-        export const subjectOf = "https://knowledge.express/subjectOf";
         export const Video = "https://knowledge.express/Video";
         export const caption = "https://knowledge.express/caption";
         export const VideoCaption = "https://knowledge.express/VideoCaption";
@@ -28,9 +25,12 @@ export module iris {
         export const CreativeWork = "https://knowledge.express/CreativeWork";
         export const startsAfter = "https://knowledge.express/startsAfter";
         export const duration = "https://knowledge.express/duration";
+        export const Entity = "https://knowledge.express/Entity";
         export const fieldOfStudy = "https://knowledge.express/fieldOfStudy";
         export const entity = "https://knowledge.express/entity";
         export const score = "https://knowledge.express/score";
+        export const subjectOf = "https://knowledge.express/subjectOf";
+        export const about = "https://knowledge.express/about";
         export const previous = "https://knowledge.express/previous";
         export const next = "https://knowledge.express/next";
         export const parent = "https://knowledge.express/parent";
@@ -41,11 +41,11 @@ export module iris {
     };
     export module owl {
         export const Class = "http://www.w3.org/2002/07/owl#Class";
-        export const DatatypeProperty = "http://www.w3.org/2002/07/owl#DatatypeProperty";
-        export const Thing = "http://www.w3.org/2002/07/owl#Thing";
         export const ObjectProperty = "http://www.w3.org/2002/07/owl#ObjectProperty";
         export const FunctionalProperty = "http://www.w3.org/2002/07/owl#FunctionalProperty";
+        export const Thing = "http://www.w3.org/2002/07/owl#Thing";
         export const inverseOf = "http://www.w3.org/2002/07/owl#inverseOf";
+        export const DatatypeProperty = "http://www.w3.org/2002/07/owl#DatatypeProperty";
         export const sameAs = "http://www.w3.org/2002/07/owl#sameAs";
     };
     export module rdfs {
@@ -68,9 +68,8 @@ export module iris {
         export const license = "http://schema.org/license";
         export const sourceOrganization = "http://schema.org/sourceOrganization";
         export const text = "http://schema.org/text";
-        export const about = "http://schema.org/about";
-        export const subjectOf = "http://schema.org/subjectOf";
         export const VideoObject = "http://schema.org/VideoObject";
+        export const about = "http://schema.org/about";
     };
     export module mag {
         export const FieldOfStudy = "http://academic.microsoft.com/FieldOfStudy";

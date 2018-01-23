@@ -4,8 +4,8 @@ export type integer = number;
 export type decimal = number;
 export type Annotation = Tag & {
     startPosition: integer
-    confidence: decimal[]
-    detectedAs: string[]
+    confidence: decimal
+    detectedAs: string
 };
 
 export type CreativeWork = {
@@ -15,7 +15,6 @@ export type CreativeWork = {
     license: string[]
     sourceOrganization: string[]
     text: string[]
-    about: Entity[]
 };
 
 export type Document = (Resource & Taggable) & {
@@ -32,7 +31,6 @@ export type Resource = CreativeWork & {
     topic: Topic[]
     tag: Tag[]
     annotation: Annotation[]
-    about: Entity[]
 };
 
 export type Video = (Resource & Taggable) & {
@@ -49,7 +47,6 @@ export type Entity = {
     fieldOfStudy: FieldOfStudy[]
     tag: Tag[]
     annotation: Annotation[]
-    subjectOf: Resource[]
     name: string
     description: string
 };
@@ -58,6 +55,7 @@ export type FieldOfStudy = {
     entity: Entity[]
     name: string
     description: string
+    image: string[]
     resource: Resource[]
     parentFieldOfStudy: FieldOfStudy[]
     childFieldOfStudy: FieldOfStudy[]
@@ -66,7 +64,7 @@ export type FieldOfStudy = {
 export type Tag = {
     resource: Resource[]
     entity: Entity[]
-    score: decimal[]
+    score: decimal
 };
 
 export type Taggable = {
