@@ -5,7 +5,6 @@ export declare module iris {
         const startPosition = "https://knowledge.express/startPosition";
         const confidence = "https://knowledge.express/confidence";
         const detectedAs = "https://knowledge.express/detectedAs";
-        const Entity = "https://knowledge.express/Entity";
         const Document = "https://knowledge.express/Document";
         const Resource = "https://knowledge.express/Resource";
         const Taggable = "https://knowledge.express/Taggable";
@@ -18,8 +17,6 @@ export declare module iris {
         const resource = "https://knowledge.express/resource";
         const tag = "https://knowledge.express/tag";
         const annotation = "https://knowledge.express/annotation";
-        const about = "https://knowledge.express/about";
-        const subjectOf = "https://knowledge.express/subjectOf";
         const Video = "https://knowledge.express/Video";
         const caption = "https://knowledge.express/caption";
         const VideoCaption = "https://knowledge.express/VideoCaption";
@@ -27,9 +24,12 @@ export declare module iris {
         const CreativeWork = "https://knowledge.express/CreativeWork";
         const startsAfter = "https://knowledge.express/startsAfter";
         const duration = "https://knowledge.express/duration";
+        const Entity = "https://knowledge.express/Entity";
         const fieldOfStudy = "https://knowledge.express/fieldOfStudy";
         const entity = "https://knowledge.express/entity";
         const score = "https://knowledge.express/score";
+        const subjectOf = "https://knowledge.express/subjectOf";
+        const about = "https://knowledge.express/about";
         const previous = "https://knowledge.express/previous";
         const next = "https://knowledge.express/next";
         const parent = "https://knowledge.express/parent";
@@ -40,11 +40,11 @@ export declare module iris {
     }
     module owl {
         const Class = "http://www.w3.org/2002/07/owl#Class";
-        const DatatypeProperty = "http://www.w3.org/2002/07/owl#DatatypeProperty";
-        const Thing = "http://www.w3.org/2002/07/owl#Thing";
         const ObjectProperty = "http://www.w3.org/2002/07/owl#ObjectProperty";
         const FunctionalProperty = "http://www.w3.org/2002/07/owl#FunctionalProperty";
+        const Thing = "http://www.w3.org/2002/07/owl#Thing";
         const inverseOf = "http://www.w3.org/2002/07/owl#inverseOf";
+        const DatatypeProperty = "http://www.w3.org/2002/07/owl#DatatypeProperty";
         const sameAs = "http://www.w3.org/2002/07/owl#sameAs";
     }
     module rdfs {
@@ -67,9 +67,8 @@ export declare module iris {
         const license = "http://schema.org/license";
         const sourceOrganization = "http://schema.org/sourceOrganization";
         const text = "http://schema.org/text";
-        const about = "http://schema.org/about";
-        const subjectOf = "http://schema.org/subjectOf";
         const VideoObject = "http://schema.org/VideoObject";
+        const about = "http://schema.org/about";
     }
     module mag {
         const FieldOfStudy = "http://academic.microsoft.com/FieldOfStudy";
