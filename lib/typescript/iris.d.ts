@@ -21,7 +21,6 @@ export declare module iris {
         const caption = "https://knowledge.express/caption";
         const VideoCaption = "https://knowledge.express/VideoCaption";
         const captionOf = "https://knowledge.express/captionOf";
-        const CreativeWork = "https://knowledge.express/CreativeWork";
         const startsAfter = "https://knowledge.express/startsAfter";
         const duration = "https://knowledge.express/duration";
         const Entity = "https://knowledge.express/Entity";
