@@ -30,7 +30,7 @@ export declare type Resource = CreativeWork & {
 export declare type Video = (Resource & Taggable) & {
     caption: VideoCaption[];
 };
-export declare type VideoCaption = Taggable & {
+export declare type VideoCaption = (CreativeWork & Taggable) & {
     captionOf: Video[];
     startsAfter: duration;
     duration: duration;

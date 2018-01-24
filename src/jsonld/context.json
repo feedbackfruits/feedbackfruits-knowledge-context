@@ -9,6 +9,7 @@
       "Tag": "https://knowledge.express/Tag",
       "DocumentSection": "https://knowledge.express/DocumentSection",
       "Resource": "https://knowledge.express/Resource",
+      "VideoCaption": "https://knowledge.express/VideoCaption",
       "Topic": "https://knowledge.express/Topic",
       "section": {
         "@id": "https://knowledge.express/section",
@@ -51,8 +52,6 @@
       },
       "startsAfter": "https://knowledge.express/startsAfter",
       "duration": "https://knowledge.express/duration",
-      "VideoCaption": "https://knowledge.express/VideoCaption",
-      "CreativeWork": "https://knowledge.express/CreativeWork",
       "fieldOfStudy": {
         "@id": "https://knowledge.express/fieldOfStudy",
         "@type": "@id",

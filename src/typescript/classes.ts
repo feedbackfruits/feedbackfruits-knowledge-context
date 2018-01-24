@@ -37,7 +37,7 @@ export type Video = (Resource & Taggable) & {
     caption: VideoCaption[]
 };
 
-export type VideoCaption = Taggable & {
+export type VideoCaption = (CreativeWork & Taggable) & {
     captionOf: Video[]
     startsAfter: duration
     duration: duration

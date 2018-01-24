@@ -1,5 +1,6 @@
 :Taggable
-  a owl:Class .
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
 
 :tag
   a owl:DatatypeProperty ;

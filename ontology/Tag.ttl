@@ -1,6 +1,6 @@
 :Tag
   a owl:Class ;
-  rdfs:subClassOf oa:SemanticTag .
+  rdfs:subClassOf owl:Thing, oa:SemanticTag .
 
 :resource
   a owl:DatatypeProperty ;
