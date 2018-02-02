@@ -25,11 +25,12 @@ export declare module iris {
         const duration = "https://knowledge.express/duration";
         const language = "https://knowledge.express/language";
         const Entity = "https://knowledge.express/Entity";
-        const fieldOfStudy = "https://knowledge.express/fieldOfStudy";
-        const entity = "https://knowledge.express/entity";
-        const score = "https://knowledge.express/score";
+        const sameAsEntity = "https://knowledge.express/sameAsEntity";
+        const sameAsFieldOfStudy = "https://knowledge.express/sameAsFieldOfStudy";
         const subjectOf = "https://knowledge.express/subjectOf";
         const about = "https://knowledge.express/about";
+        const tagOf = "https://knowledge.express/tagOf";
+        const score = "https://knowledge.express/score";
         const previous = "https://knowledge.express/previous";
         const next = "https://knowledge.express/next";
         const parent = "https://knowledge.express/parent";
@@ -43,7 +44,6 @@ export declare module iris {
         const ObjectProperty = "http://www.w3.org/2002/07/owl#ObjectProperty";
         const FunctionalProperty = "http://www.w3.org/2002/07/owl#FunctionalProperty";
         const inverseOf = "http://www.w3.org/2002/07/owl#inverseOf";
-        const DatatypeProperty = "http://www.w3.org/2002/07/owl#DatatypeProperty";
         const Thing = "http://www.w3.org/2002/07/owl#Thing";
         const sameAs = "http://www.w3.org/2002/07/owl#sameAs";
     }
@@ -63,6 +63,7 @@ export declare module iris {
         const CreativeWork = "http://schema.org/CreativeWork";
         const VideoObject = "http://schema.org/VideoObject";
         const inLanguage = "http://schema.org/inLanguage";
+        const subjectOf = "http://schema.org/subjectOf";
         const name = "http://schema.org/name";
         const description = "http://schema.org/description";
         const image = "http://schema.org/image";

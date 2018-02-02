@@ -2,17 +2,18 @@
   a owl:Class ;
   rdfs:subClassOf owl:Thing, oa:SemanticTag .
 
-:resource
-  a owl:DatatypeProperty ;
+:tagOf
+  a owl:ObjectProperty ;
   rdfs:domain :Tag ;
-  rdfs:range :Resource ;
+  rdfs:range :Taggable ;
   owl:inverseOf :tag .
 
-:entity
-  a owl:DatatypeProperty ;
+:about
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf schema:about ;
   rdfs:domain :Tag ;
   rdfs:range :Entity ;
-  owl:inverseOf :tag .
+  owl:inverseOf :subjectOf .
 
 :score
   a owl:ObjectProperty, owl:FunctionalProperty ;

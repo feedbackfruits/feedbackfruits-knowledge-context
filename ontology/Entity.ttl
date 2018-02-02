@@ -2,25 +2,20 @@
   a owl:Class ;
   rdfs:subClassOf owl:Thing .
 
-:fieldOfStudy
+# This is temporary until the name clashing with owl:sameAs is fixed
+:sameAsEntity
   a owl:ObjectProperty ;
   rdfs:subPropertyOf owl:sameAs ;
   rdfs:domain :Entity ;
   rdfs:range mag:FieldOfStudy ;
-  owl:inverseOf :entity .
+  owl:inverseOf :sameAsFieldOfStudy .
 
-:tag
-  a owl:DatatypeProperty ;
+:subjectOf
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf schema:subjectOf ;
   rdfs:domain :Entity ;
   rdfs:range :Tag ;
-  owl:inverseOf :entity .
-
-:annotation
-  a owl:DatatypeProperty ;
-  rdfs:subPropertyOf :tag ;
-  rdfs:domain :Entity ;
-  rdfs:range :Annotation ;
-  owl:inverseOf :entity .
+  owl:inverseOf :about .
 
 schema:name
   a owl:ObjectProperty, owl:FunctionalProperty ;
