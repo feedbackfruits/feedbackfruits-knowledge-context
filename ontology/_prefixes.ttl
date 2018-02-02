@@ -1,10 +1,23 @@
+# The main prefix
 @prefix : <https://knowledge.express/> .
+
+# Prerequisites for basic definition
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+# Reuse schema.org types. We cannot include the ontology directly yet because of rangeIncludes/domainIncludes
 @prefix schema: <http://schema.org/> .
+
+# We might want to move this into the default prefix
 @prefix mag: <http://academic.microsoft.com/> .
 
+# Annotations
 @prefix oa: <http://www.w3.org/ns/oa#> .
+
+# Licensing. We cannot include this ontology yet (I think) because the localname 'license' would be ambiguous
+@prefix cc: <http://creativecommons.org/ns#> .
+
+# Unused, might be useful in the future for knowledge organisation
+# @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .

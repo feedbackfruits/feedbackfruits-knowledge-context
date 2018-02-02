@@ -28,6 +28,6 @@
   },
   "repository": "git@github.com:feedbackfruits/feedbackfruits-knowledge-context.git",
   "devDependencies": {
-    "rdf-tools": "^0.4.2"
+    "rdf-tools": "^0.4.4"
   }
 }

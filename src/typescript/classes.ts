@@ -1,20 +1,23 @@
 
+
 export type duration = string;
 export type integer = number;
 export type decimal = number;
+export module RDF {
+    export type Resource = {
+        id: string
+    };
+};
+export type VideoObject = RDF.Resource;
+export type Thing = RDF.Resource;
+export type ImageObject = RDF.Resource;
+export type License = RDF.Resource;
+export type Organization = RDF.Resource;
+export type SemanticTag = RDF.Resource;
 export type Annotation = Tag & {
     startPosition: integer
     confidence: decimal
     detectedAs: string
-};
-
-export type CreativeWork = {
-    name: string
-    description: string
-    image: string[]
-    license: string[]
-    sourceOrganization: string[]
-    text: string[]
 };
 
 export type Document = (Resource & Taggable) & {
@@ -41,9 +44,10 @@ export type VideoCaption = (CreativeWork & Taggable) & {
     captionOf: Video[]
     startsAfter: duration
     duration: duration
+    language: string
 };
 
-export type Entity = {
+export type Entity = RDF.Resource & {
     fieldOfStudy: FieldOfStudy[]
     tag: Tag[]
     annotation: Annotation[]
@@ -51,23 +55,32 @@ export type Entity = {
     description: string
 };
 
-export type FieldOfStudy = {
+export type FieldOfStudy = RDF.Resource & {
     entity: Entity[]
-    name: string
-    description: string
-    image: string[]
     resource: Resource[]
     parentFieldOfStudy: FieldOfStudy[]
     childFieldOfStudy: FieldOfStudy[]
+    name: string
+    description: string
+    image: ImageObject[]
 };
 
-export type Tag = {
+export type CreativeWork = RDF.Resource & {
+    name: string
+    description: string
+    image: ImageObject[]
+    license: License[]
+    sourceOrganization: Organization[]
+    text: string
+};
+
+export type Tag = RDF.Resource & {
     resource: Resource[]
     entity: Entity[]
     score: decimal
 };
 
-export type Taggable = {
+export type Taggable = RDF.Resource & {
     tag: Tag[]
     annotation: Annotation[]
 };

@@ -9,21 +9,6 @@ mag:FieldOfStudy
   rdfs:range :Entity ;
   owl:inverseOf :fieldOfStudy .
 
-schema:name
-  a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain mag:FieldOfStudy ;
-  rdfs:range xsd:string .
-
-schema:description
-  a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain mag:FieldOfStudy ;
-  rdfs:range xsd:string .
-
-schema:image
-  a owl:ObjectProperty ;
-  rdfs:domain mag:FieldOfStudy ;
-  rdfs:range xsd:string .
-
 :resource
   a owl:ObjectProperty ;
   rdfs:domain mag:FieldOfStudy ;

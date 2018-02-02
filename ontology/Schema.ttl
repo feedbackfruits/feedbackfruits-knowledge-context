@@ -1,33 +1,35 @@
+# This file becomes obsolete once we can load the schema.org ontology into semantic graphql
+
 schema:CreativeWork
   a owl:Class ;
   rdfs:subClassOf owl:Thing .
 
 schema:name
   a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain schema:CreativeWork ;
+  rdfs:domain schema:CreativeWork, mag:FieldOfStudy ;
   rdfs:range xsd:string .
 
 schema:description
   a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain schema:CreativeWork ;
+  rdfs:domain schema:CreativeWork, mag:FieldOfStudy ;
   rdfs:range xsd:string .
 
 schema:image
   a owl:ObjectProperty ;
-  rdfs:domain schema:CreativeWork ;
-  rdfs:range xsd:string .
+  rdfs:domain schema:CreativeWork, mag:FieldOfStudy ;
+  rdfs:range schema:ImageObject .
 
 schema:license
   a owl:ObjectProperty ;
   rdfs:domain schema:CreativeWork ;
-  rdfs:range xsd:string .
+  rdfs:range cc:License .
 
 schema:sourceOrganization
   a owl:ObjectProperty ;
   rdfs:domain schema:CreativeWork ;
-  rdfs:range xsd:string .
+  rdfs:range schema:Organization .
 
 schema:text
-  a owl:ObjectProperty ;
+  a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .

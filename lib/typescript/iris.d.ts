@@ -23,6 +23,7 @@ export declare module iris {
         const captionOf = "https://knowledge.express/captionOf";
         const startsAfter = "https://knowledge.express/startsAfter";
         const duration = "https://knowledge.express/duration";
+        const language = "https://knowledge.express/language";
         const Entity = "https://knowledge.express/Entity";
         const fieldOfStudy = "https://knowledge.express/fieldOfStudy";
         const entity = "https://knowledge.express/entity";
@@ -41,9 +42,9 @@ export declare module iris {
         const Class = "http://www.w3.org/2002/07/owl#Class";
         const ObjectProperty = "http://www.w3.org/2002/07/owl#ObjectProperty";
         const FunctionalProperty = "http://www.w3.org/2002/07/owl#FunctionalProperty";
-        const Thing = "http://www.w3.org/2002/07/owl#Thing";
         const inverseOf = "http://www.w3.org/2002/07/owl#inverseOf";
         const DatatypeProperty = "http://www.w3.org/2002/07/owl#DatatypeProperty";
+        const Thing = "http://www.w3.org/2002/07/owl#Thing";
         const sameAs = "http://www.w3.org/2002/07/owl#sameAs";
     }
     module rdfs {
@@ -60,19 +61,25 @@ export declare module iris {
     }
     module schema {
         const CreativeWork = "http://schema.org/CreativeWork";
+        const VideoObject = "http://schema.org/VideoObject";
+        const inLanguage = "http://schema.org/inLanguage";
         const name = "http://schema.org/name";
         const description = "http://schema.org/description";
         const image = "http://schema.org/image";
+        const ImageObject = "http://schema.org/ImageObject";
         const license = "http://schema.org/license";
         const sourceOrganization = "http://schema.org/sourceOrganization";
+        const Organization = "http://schema.org/Organization";
         const text = "http://schema.org/text";
-        const VideoObject = "http://schema.org/VideoObject";
         const about = "http://schema.org/about";
     }
     module mag {
         const FieldOfStudy = "http://academic.microsoft.com/FieldOfStudy";
         const parentFieldOfStudy = "http://academic.microsoft.com/parentFieldOfStudy";
         const childFieldOfStudy = "http://academic.microsoft.com/childFieldOfStudy";
+    }
+    module cc {
+        const License = "http://creativecommons.org/ns#License";
     }
     module oa {
         const SemanticTag = "http://www.w3.org/ns/oa#SemanticTag";

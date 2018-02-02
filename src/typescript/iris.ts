@@ -24,6 +24,7 @@ export module iris {
         export const captionOf = "https://knowledge.express/captionOf";
         export const startsAfter = "https://knowledge.express/startsAfter";
         export const duration = "https://knowledge.express/duration";
+        export const language = "https://knowledge.express/language";
         export const Entity = "https://knowledge.express/Entity";
         export const fieldOfStudy = "https://knowledge.express/fieldOfStudy";
         export const entity = "https://knowledge.express/entity";
@@ -42,9 +43,9 @@ export module iris {
         export const Class = "http://www.w3.org/2002/07/owl#Class";
         export const ObjectProperty = "http://www.w3.org/2002/07/owl#ObjectProperty";
         export const FunctionalProperty = "http://www.w3.org/2002/07/owl#FunctionalProperty";
-        export const Thing = "http://www.w3.org/2002/07/owl#Thing";
         export const inverseOf = "http://www.w3.org/2002/07/owl#inverseOf";
         export const DatatypeProperty = "http://www.w3.org/2002/07/owl#DatatypeProperty";
+        export const Thing = "http://www.w3.org/2002/07/owl#Thing";
         export const sameAs = "http://www.w3.org/2002/07/owl#sameAs";
     };
     export module rdfs {
@@ -61,19 +62,25 @@ export module iris {
     };
     export module schema {
         export const CreativeWork = "http://schema.org/CreativeWork";
+        export const VideoObject = "http://schema.org/VideoObject";
+        export const inLanguage = "http://schema.org/inLanguage";
         export const name = "http://schema.org/name";
         export const description = "http://schema.org/description";
         export const image = "http://schema.org/image";
+        export const ImageObject = "http://schema.org/ImageObject";
         export const license = "http://schema.org/license";
         export const sourceOrganization = "http://schema.org/sourceOrganization";
+        export const Organization = "http://schema.org/Organization";
         export const text = "http://schema.org/text";
-        export const VideoObject = "http://schema.org/VideoObject";
         export const about = "http://schema.org/about";
     };
     export module mag {
         export const FieldOfStudy = "http://academic.microsoft.com/FieldOfStudy";
         export const parentFieldOfStudy = "http://academic.microsoft.com/parentFieldOfStudy";
         export const childFieldOfStudy = "http://academic.microsoft.com/childFieldOfStudy";
+    };
+    export module cc {
+        export const License = "http://creativecommons.org/ns#License";
     };
     export module oa {
         export const SemanticTag = "http://www.w3.org/ns/oa#SemanticTag";
