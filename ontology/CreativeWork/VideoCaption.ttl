@@ -17,3 +17,9 @@
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :VideoCaption ;
   rdfs:range xsd:duration .
+
+:language
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:subPropertyOf schema:inLanguage ;
+  rdfs:domain :VideoCaption ;
+  rdfs:range xsd:string .

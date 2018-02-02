@@ -7,16 +7,13 @@
       "detectedAs": "https://knowledge.express/detectedAs",
       "Annotation": "https://knowledge.express/Annotation",
       "Tag": "https://knowledge.express/Tag",
-      "DocumentSection": "https://knowledge.express/DocumentSection",
-      "Resource": "https://knowledge.express/Resource",
-      "VideoCaption": "https://knowledge.express/VideoCaption",
-      "Topic": "https://knowledge.express/Topic",
       "section": {
         "@id": "https://knowledge.express/section",
         "@type": "@id",
         "@container": "@set"
       },
       "Document": "https://knowledge.express/Document",
+      "Resource": "https://knowledge.express/Resource",
       "Taggable": "https://knowledge.express/Taggable",
       "sectionOf": {
         "@id": "https://knowledge.express/sectionOf",
@@ -24,6 +21,7 @@
         "@container": "@set"
       },
       "endPosition": "https://knowledge.express/endPosition",
+      "DocumentSection": "https://knowledge.express/DocumentSection",
       "topic": {
         "@id": "https://knowledge.express/topic",
         "@type": "@id",
@@ -52,6 +50,8 @@
       },
       "startsAfter": "https://knowledge.express/startsAfter",
       "duration": "https://knowledge.express/duration",
+      "language": "https://knowledge.express/language",
+      "VideoCaption": "https://knowledge.express/VideoCaption",
       "fieldOfStudy": {
         "@id": "https://knowledge.express/fieldOfStudy",
         "@type": "@id",
@@ -68,6 +68,7 @@
         "@type": "@id",
         "@container": "@set"
       },
+      "Topic": "https://knowledge.express/Topic",
       "score": "https://knowledge.express/score",
       "previous": {
         "@id": "https://knowledge.express/previous",
@@ -92,6 +93,8 @@
     },
     {
       "@vocab": "http://schema.org/",
+      "CreativeWork": "http://schema.org/CreativeWork",
+      "VideoObject": "http://schema.org/VideoObject",
       "name": "http://schema.org/name",
       "description": "http://schema.org/description",
       "image": {
@@ -109,13 +112,7 @@
         "@type": "@id",
         "@container": "@set"
       },
-      "text": {
-        "@id": "http://schema.org/text",
-        "@type": "@id",
-        "@container": "@set"
-      },
-      "CreativeWork": "http://schema.org/CreativeWork",
-      "VideoObject": "http://schema.org/VideoObject"
+      "text": "http://schema.org/text"
     },
     {
       "@vocab": "http://www.w3.org/2002/07/owl#",
