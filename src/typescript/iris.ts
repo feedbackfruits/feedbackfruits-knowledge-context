@@ -26,11 +26,12 @@ export module iris {
         export const duration = "https://knowledge.express/duration";
         export const language = "https://knowledge.express/language";
         export const Entity = "https://knowledge.express/Entity";
-        export const fieldOfStudy = "https://knowledge.express/fieldOfStudy";
-        export const entity = "https://knowledge.express/entity";
-        export const score = "https://knowledge.express/score";
+        export const sameAsEntity = "https://knowledge.express/sameAsEntity";
+        export const sameAsFieldOfStudy = "https://knowledge.express/sameAsFieldOfStudy";
         export const subjectOf = "https://knowledge.express/subjectOf";
         export const about = "https://knowledge.express/about";
+        export const tagOf = "https://knowledge.express/tagOf";
+        export const score = "https://knowledge.express/score";
         export const previous = "https://knowledge.express/previous";
         export const next = "https://knowledge.express/next";
         export const parent = "https://knowledge.express/parent";
@@ -44,7 +45,6 @@ export module iris {
         export const ObjectProperty = "http://www.w3.org/2002/07/owl#ObjectProperty";
         export const FunctionalProperty = "http://www.w3.org/2002/07/owl#FunctionalProperty";
         export const inverseOf = "http://www.w3.org/2002/07/owl#inverseOf";
-        export const DatatypeProperty = "http://www.w3.org/2002/07/owl#DatatypeProperty";
         export const Thing = "http://www.w3.org/2002/07/owl#Thing";
         export const sameAs = "http://www.w3.org/2002/07/owl#sameAs";
     };
@@ -64,6 +64,7 @@ export module iris {
         export const CreativeWork = "http://schema.org/CreativeWork";
         export const VideoObject = "http://schema.org/VideoObject";
         export const inLanguage = "http://schema.org/inLanguage";
+        export const subjectOf = "http://schema.org/subjectOf";
         export const name = "http://schema.org/name";
         export const description = "http://schema.org/description";
         export const image = "http://schema.org/image";

@@ -3,14 +3,13 @@
   rdfs:subClassOf owl:Thing .
 
 :tag
-  a owl:DatatypeProperty ;
-  rdfs:subPropertyOf schema:about ;
+  a owl:ObjectProperty ;
   rdfs:domain :Taggable ;
   rdfs:range :Tag ;
   owl:inverseOf :subjectOf .
 
 :annotation
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
   rdfs:subPropertyOf :tag ;
   rdfs:domain :Taggable ;
   rdfs:range :Annotation ;

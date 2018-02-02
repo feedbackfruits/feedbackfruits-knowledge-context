@@ -9,13 +9,13 @@
   owl:inverseOf :resource .
 
 :tag
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
   rdfs:domain :Resource ;
   rdfs:range :Tag ;
   owl:inverseOf :resource .
 
 :annotation
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
   rdfs:subPropertyOf :tag ;
   rdfs:domain :Resource ;
   rdfs:range :Annotation ;

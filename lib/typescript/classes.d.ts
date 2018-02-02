@@ -40,14 +40,13 @@ export declare type VideoCaption = (CreativeWork & Taggable) & {
     language: string;
 };
 export declare type Entity = RDF.Resource & {
-    fieldOfStudy: FieldOfStudy[];
-    tag: Tag[];
-    annotation: Annotation[];
+    sameAsEntity: FieldOfStudy[];
+    subjectOf: Tag[];
     name: string;
     description: string;
 };
 export declare type FieldOfStudy = RDF.Resource & {
-    entity: Entity[];
+    sameAsFieldOfStudy: Entity[];
     resource: Resource[];
     parentFieldOfStudy: FieldOfStudy[];
     childFieldOfStudy: FieldOfStudy[];
@@ -64,8 +63,8 @@ export declare type CreativeWork = RDF.Resource & {
     text: string;
 };
 export declare type Tag = RDF.Resource & {
-    resource: Resource[];
-    entity: Entity[];
+    tagOf: Taggable[];
+    about: Entity[];
     score: decimal;
 };
 export declare type Taggable = RDF.Resource & {
