@@ -3,13 +3,13 @@
   rdfs:subClassOf owl:Thing, oa:SemanticTag .
 
 :tagOf
-  a owl:ObjectProperty ;
+  a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :Tag ;
   rdfs:range :Taggable ;
   owl:inverseOf :tag .
 
 :about
-  a owl:ObjectProperty ;
+  a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:subPropertyOf schema:about ;
   rdfs:domain :Tag ;
   rdfs:range :Entity ;

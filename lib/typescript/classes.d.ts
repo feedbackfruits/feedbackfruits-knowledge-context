@@ -63,8 +63,8 @@ export declare type CreativeWork = RDF.Resource & {
     text: string;
 };
 export declare type Tag = RDF.Resource & {
-    tagOf: Taggable[];
-    about: Entity[];
+    tagOf: Taggable;
+    about: Entity;
     score: decimal;
 };
 export declare type Taggable = RDF.Resource & {
