@@ -74,8 +74,8 @@ export type CreativeWork = RDF.Resource & {
 };
 
 export type Tag = RDF.Resource & {
-    tagOf: Taggable[]
-    about: Entity[]
+    tagOf: Taggable
+    about: Entity
     score: decimal
 };
 

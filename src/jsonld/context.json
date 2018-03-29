@@ -76,13 +76,11 @@
       "Topic": "https://knowledge.express/Topic",
       "tagOf": {
         "@id": "https://knowledge.express/tagOf",
-        "@type": "@id",
-        "@container": "@set"
+        "@type": "@id"
       },
       "about": {
         "@id": "https://knowledge.express/about",
-        "@type": "@id",
-        "@container": "@set"
+        "@type": "@id"
       },
       "score": "https://knowledge.express/score",
       "previous": {
