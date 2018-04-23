@@ -20,3 +20,9 @@
   rdfs:domain :Resource ;
   rdfs:range :Annotation ;
   owl:inverseOf :resource .
+
+# This is very hacky, should be done properly at some point
+:relevance
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range xsd:string .
