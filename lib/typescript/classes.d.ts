@@ -6,7 +6,6 @@ export declare module RDF {
         id: string;
     };
 }
-export declare type VideoObject = RDF.Resource;
 export declare type Thing = RDF.Resource;
 export declare type ImageObject = RDF.Resource;
 export declare type License = RDF.Resource;
@@ -17,20 +16,13 @@ export declare type Annotation = Tag & {
     confidence: decimal;
     detectedAs: string;
 };
-export declare type Document = (Resource & Taggable) & {
-    section: DocumentSection[];
-};
-export declare type DocumentSection = CreativeWork & {
-    sectionOf: Document[];
-    startPosition: integer;
-    endPosition: integer;
-};
+export declare type Document = (Resource & (Taggable & MediaObject)) & {};
 export declare type Resource = CreativeWork & {
     topic: Topic[];
     tag: Tag[];
     annotation: Annotation[];
 };
-export declare type Video = (Resource & Taggable) & {
+export declare type Video = (VideoObject & (Resource & Taggable)) & {
     caption: VideoCaption[];
 };
 export declare type VideoCaption = (CreativeWork & Taggable) & {
@@ -61,7 +53,14 @@ export declare type CreativeWork = RDF.Resource & {
     license: License[];
     sourceOrganization: Organization[];
     text: string;
+    encoding: MediaObject[];
 };
+export declare type MediaObject = CreativeWork & {
+    encodesCreativeWork: CreativeWork;
+    contentUrl: string;
+    encodingFormat: string;
+};
+export declare type VideoObject = MediaObject & {};
 export declare type Tag = RDF.Resource & {
     tagOf: Taggable;
     about: Entity;
