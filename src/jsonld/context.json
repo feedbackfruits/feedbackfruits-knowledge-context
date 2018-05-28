@@ -7,21 +7,9 @@
       "detectedAs": "https://knowledge.express/detectedAs",
       "Annotation": "https://knowledge.express/Annotation",
       "Tag": "https://knowledge.express/Tag",
-      "section": {
-        "@id": "https://knowledge.express/section",
-        "@type": "@id",
-        "@container": "@set"
-      },
       "Document": "https://knowledge.express/Document",
       "Resource": "https://knowledge.express/Resource",
       "Taggable": "https://knowledge.express/Taggable",
-      "sectionOf": {
-        "@id": "https://knowledge.express/sectionOf",
-        "@type": "@id",
-        "@container": "@set"
-      },
-      "endPosition": "https://knowledge.express/endPosition",
-      "DocumentSection": "https://knowledge.express/DocumentSection",
       "topic": {
         "@id": "https://knowledge.express/topic",
         "@type": "@id",
@@ -106,6 +94,7 @@
     },
     {
       "@vocab": "http://schema.org/",
+      "MediaObject": "http://schema.org/MediaObject",
       "CreativeWork": "http://schema.org/CreativeWork",
       "VideoObject": "http://schema.org/VideoObject",
       "name": "http://schema.org/name",
@@ -125,7 +114,18 @@
         "@type": "@id",
         "@container": "@set"
       },
-      "text": "http://schema.org/text"
+      "text": "http://schema.org/text",
+      "encoding": {
+        "@id": "http://schema.org/encoding",
+        "@type": "@id",
+        "@container": "@set"
+      },
+      "encodesCreativeWork": {
+        "@id": "http://schema.org/encodesCreativeWork",
+        "@type": "@id"
+      },
+      "contentUrl": "http://schema.org/contentUrl",
+      "encodingFormat": "http://schema.org/encodingFormat"
     },
     {
       "@vocab": "http://www.w3.org/2002/07/owl#",

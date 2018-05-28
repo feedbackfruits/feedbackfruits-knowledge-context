@@ -1,29 +1,29 @@
 :Document
   a owl:Class ;
-  rdfs:subClassOf :Resource, :Taggable .
+  rdfs:subClassOf :Resource, :Taggable, schema:MediaObject .
 
-:section
-  a owl:ObjectProperty ;
-  rdfs:domain :Document ;
-  rdfs:range :DocumentSection ;
-  owl:inverseOf :sectionOf .
-
-:DocumentSection
-  a owl:Class ;
-  rdfs:subClassOf schema:CreativeWork .
-
-:sectionOf
-  a owl:ObjectProperty ;
-  rdfs:domain :DocumentSection ;
-  rdfs:range :Document ;
-  owl:inverseOf :section .
-
-:startPosition
-  a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain :DocumentSection ;
-  rdfs:range xsd:integer .
-
-:endPosition
-  a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain :DocumentSection ;
-  rdfs:range xsd:integer .
+# :section
+#   a owl:ObjectProperty ;
+#   rdfs:domain :Document ;
+#   rdfs:range :DocumentSection ;
+#   owl:inverseOf :sectionOf .
+#
+# :DocumentSection
+#   a owl:Class ;
+#   rdfs:subClassOf schema:MediaObject .
+#
+# :sectionOf
+#   a owl:ObjectProperty ;
+#   rdfs:domain :DocumentSection ;
+#   rdfs:range :Document ;
+#   owl:inverseOf :section .
+#
+# :startPosition
+#   a owl:ObjectProperty, owl:FunctionalProperty ;
+#   rdfs:domain :DocumentSection ;
+#   rdfs:range xsd:integer .
+#
+# :endPosition
+#   a owl:ObjectProperty, owl:FunctionalProperty ;
+#   rdfs:domain :DocumentSection ;
+#   rdfs:range xsd:integer .

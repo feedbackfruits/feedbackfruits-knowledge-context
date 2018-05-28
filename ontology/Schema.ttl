@@ -1,5 +1,6 @@
 # This file becomes obsolete once we can load the schema.org ontology into semantic graphql
 
+# CreativeWork
 schema:CreativeWork
   a owl:Class ;
   rdfs:subClassOf owl:Thing .
@@ -33,3 +34,35 @@ schema:text
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain schema:CreativeWork ;
   rdfs:range xsd:string .
+
+schema:encoding
+  a owl:ObjectProperty ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:range schema:MediaObject ;
+  owl:inverseOf schema:encodesCreativeWork .
+
+# MediaObject
+schema:MediaObject
+  a owl:Class ;
+  rdfs:subClassOf schema:CreativeWork .
+
+schema:encodesCreativeWork
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:MediaObject ;
+  rdfs:range schema:CreativeWork ;
+  owl:inverseOf schema:encoding .
+
+schema:contentUrl
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:MediaObject ;
+  rdfs:range xsd:string .
+
+schema:encodingFormat
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:MediaObject ;
+  rdfs:range xsd:string .
+
+# VideoObject
+schema:VideoObject
+  a owl:Class ;
+  rdfs:subClassOf schema:MediaObject .

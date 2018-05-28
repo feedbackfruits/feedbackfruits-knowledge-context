@@ -8,7 +8,6 @@ export module RDF {
         id: string
     };
 };
-export type VideoObject = RDF.Resource;
 export type Thing = RDF.Resource;
 export type ImageObject = RDF.Resource;
 export type License = RDF.Resource;
@@ -20,14 +19,8 @@ export type Annotation = Tag & {
     detectedAs: string
 };
 
-export type Document = (Resource & Taggable) & {
-    section: DocumentSection[]
-};
+export type Document = (Resource & (Taggable & MediaObject)) & {
 
-export type DocumentSection = CreativeWork & {
-    sectionOf: Document[]
-    startPosition: integer
-    endPosition: integer
 };
 
 export type Resource = CreativeWork & {
@@ -36,7 +29,7 @@ export type Resource = CreativeWork & {
     annotation: Annotation[]
 };
 
-export type Video = (Resource & Taggable) & {
+export type Video = (VideoObject & (Resource & Taggable)) & {
     caption: VideoCaption[]
 };
 
@@ -71,6 +64,17 @@ export type CreativeWork = RDF.Resource & {
     license: License[]
     sourceOrganization: Organization[]
     text: string
+    encoding: MediaObject[]
+};
+
+export type MediaObject = CreativeWork & {
+    encodesCreativeWork: CreativeWork
+    contentUrl: string
+    encodingFormat: string
+};
+
+export type VideoObject = MediaObject & {
+
 };
 
 export type Tag = RDF.Resource & {

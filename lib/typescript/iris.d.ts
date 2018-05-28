@@ -8,10 +8,6 @@ export declare module iris {
         const Document = "https://knowledge.express/Document";
         const Resource = "https://knowledge.express/Resource";
         const Taggable = "https://knowledge.express/Taggable";
-        const section = "https://knowledge.express/section";
-        const DocumentSection = "https://knowledge.express/DocumentSection";
-        const sectionOf = "https://knowledge.express/sectionOf";
-        const endPosition = "https://knowledge.express/endPosition";
         const topic = "https://knowledge.express/topic";
         const Topic = "https://knowledge.express/Topic";
         const resource = "https://knowledge.express/resource";
@@ -60,6 +56,7 @@ export declare module iris {
         const duration = "http://www.w3.org/2001/XMLSchema#duration";
     }
     module schema {
+        const MediaObject = "http://schema.org/MediaObject";
         const CreativeWork = "http://schema.org/CreativeWork";
         const VideoObject = "http://schema.org/VideoObject";
         const inLanguage = "http://schema.org/inLanguage";
@@ -72,6 +69,10 @@ export declare module iris {
         const sourceOrganization = "http://schema.org/sourceOrganization";
         const Organization = "http://schema.org/Organization";
         const text = "http://schema.org/text";
+        const encoding = "http://schema.org/encoding";
+        const encodesCreativeWork = "http://schema.org/encodesCreativeWork";
+        const contentUrl = "http://schema.org/contentUrl";
+        const encodingFormat = "http://schema.org/encodingFormat";
         const about = "http://schema.org/about";
     }
     module mag {
