@@ -69,7 +69,7 @@ export type CreativeWork = RDF.Resource & {
 
 export type MediaObject = CreativeWork & {
     encodesCreativeWork: CreativeWork
-    contentUrl: string
+    contentUrl: Thing
     encodingFormat: string
 };
 

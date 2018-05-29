@@ -124,7 +124,10 @@
         "@id": "http://schema.org/encodesCreativeWork",
         "@type": "@id"
       },
-      "contentUrl": "http://schema.org/contentUrl",
+      "contentUrl": {
+        "@id": "http://schema.org/contentUrl",
+        "@type": "@id"
+      },
       "encodingFormat": "http://schema.org/encodingFormat"
     },
     {
