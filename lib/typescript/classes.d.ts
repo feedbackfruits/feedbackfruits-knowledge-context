@@ -57,7 +57,7 @@ export declare type CreativeWork = RDF.Resource & {
 };
 export declare type MediaObject = CreativeWork & {
     encodesCreativeWork: CreativeWork;
-    contentUrl: string;
+    contentUrl: Thing;
     encodingFormat: string;
 };
 export declare type VideoObject = MediaObject & {};

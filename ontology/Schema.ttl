@@ -55,7 +55,7 @@ schema:encodesCreativeWork
 schema:contentUrl
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain schema:MediaObject ;
-  rdfs:range xsd:string .
+  rdfs:range owl:Thing .
 
 schema:encodingFormat
   a owl:ObjectProperty, owl:FunctionalProperty ;
