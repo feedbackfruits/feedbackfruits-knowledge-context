@@ -16,3 +16,12 @@
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :Annotation ;
   rdfs:range xsd:string .
+
+:VideoAnnotation
+  a owl:Class ;
+  rdfs:subClassOf :Annotation .
+
+:startDuration
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Annotation ;
+  rdfs:range xsd:duration .
