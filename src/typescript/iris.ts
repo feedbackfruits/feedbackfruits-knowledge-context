@@ -6,6 +6,8 @@ export module iris {
         export const startPosition = "https://knowledge.express/startPosition";
         export const confidence = "https://knowledge.express/confidence";
         export const detectedAs = "https://knowledge.express/detectedAs";
+        export const VideoAnnotation = "https://knowledge.express/VideoAnnotation";
+        export const startDuration = "https://knowledge.express/startDuration";
         export const Document = "https://knowledge.express/Document";
         export const Resource = "https://knowledge.express/Resource";
         export const Taggable = "https://knowledge.express/Taggable";

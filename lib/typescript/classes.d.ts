@@ -15,7 +15,9 @@ export declare type Annotation = Tag & {
     startPosition: integer;
     confidence: decimal;
     detectedAs: string;
+    startDuration: duration;
 };
+export declare type VideoAnnotation = Annotation & {};
 export declare type Document = (Resource & (Taggable & MediaObject)) & {};
 export declare type Resource = CreativeWork & {
     topic: Topic[];

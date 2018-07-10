@@ -17,6 +17,11 @@ export type Annotation = Tag & {
     startPosition: integer
     confidence: decimal
     detectedAs: string
+    startDuration: duration
+};
+
+export type VideoAnnotation = Annotation & {
+
 };
 
 export type Document = (Resource & (Taggable & MediaObject)) & {
