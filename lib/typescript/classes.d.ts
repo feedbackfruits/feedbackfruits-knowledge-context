@@ -23,6 +23,8 @@ export declare type Resource = CreativeWork & {
     topic: Topic[];
     tag: Tag[];
     annotation: Annotation[];
+    contentLength: integer;
+    contentDuration: duration;
 };
 export declare type Video = (VideoObject & (Resource & Taggable)) & {
     caption: VideoCaption[];

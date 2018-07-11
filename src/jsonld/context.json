@@ -27,6 +27,8 @@
         "@type": "@id",
         "@container": "@set"
       },
+      "contentLength": "https://knowledge.express/contentLength",
+      "contentDuration": "https://knowledge.express/contentDuration",
       "Video": "https://knowledge.express/Video",
       "caption": {
         "@id": "https://knowledge.express/caption",
