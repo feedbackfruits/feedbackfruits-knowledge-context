@@ -15,6 +15,8 @@ export declare module iris {
         const resource = "https://knowledge.express/resource";
         const tag = "https://knowledge.express/tag";
         const annotation = "https://knowledge.express/annotation";
+        const contentLength = "https://knowledge.express/contentLength";
+        const contentDuration = "https://knowledge.express/contentDuration";
         const Video = "https://knowledge.express/Video";
         const caption = "https://knowledge.express/caption";
         const VideoCaption = "https://knowledge.express/VideoCaption";

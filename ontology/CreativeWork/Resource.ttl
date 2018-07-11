@@ -20,3 +20,13 @@
   rdfs:domain :Resource ;
   rdfs:range :Annotation ;
   owl:inverseOf :resource .
+
+:contentLength
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range xsd:integer .
+
+:contentDuration
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range xsd:duration .

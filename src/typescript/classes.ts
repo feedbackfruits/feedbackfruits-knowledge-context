@@ -32,6 +32,8 @@ export type Resource = CreativeWork & {
     topic: Topic[]
     tag: Tag[]
     annotation: Annotation[]
+    contentLength: integer
+    contentDuration: duration
 };
 
 export type Video = (VideoObject & (Resource & Taggable)) & {
