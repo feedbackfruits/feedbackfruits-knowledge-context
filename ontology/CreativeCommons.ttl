@@ -1,0 +1,2 @@
+cc:License
+  a owl:Class .

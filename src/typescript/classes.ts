@@ -9,9 +9,6 @@ export module RDF {
     };
 };
 export type Thing = RDF.Resource;
-export type ImageObject = RDF.Resource;
-export type License = RDF.Resource;
-export type Organization = RDF.Resource;
 export type SemanticTag = RDF.Resource;
 export type Annotation = Tag & {
     startPosition: integer
@@ -21,6 +18,10 @@ export type Annotation = Tag & {
 };
 
 export type VideoAnnotation = Annotation & {
+
+};
+
+export type License = RDF.Resource & {
 
 };
 
@@ -64,6 +65,10 @@ export type FieldOfStudy = RDF.Resource & {
     image: ImageObject[]
 };
 
+export type Organization = RDF.Resource & {
+
+};
+
 export type CreativeWork = RDF.Resource & {
     name: string
     description: string
@@ -78,6 +83,10 @@ export type MediaObject = CreativeWork & {
     encodesCreativeWork: CreativeWork
     contentUrl: Thing
     encodingFormat: string
+};
+
+export type ImageObject = MediaObject & {
+
 };
 
 export type VideoObject = MediaObject & {

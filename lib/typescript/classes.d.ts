@@ -7,9 +7,6 @@ export declare module RDF {
     };
 }
 export declare type Thing = RDF.Resource;
-export declare type ImageObject = RDF.Resource;
-export declare type License = RDF.Resource;
-export declare type Organization = RDF.Resource;
 export declare type SemanticTag = RDF.Resource;
 export declare type Annotation = Tag & {
     startPosition: integer;
@@ -18,6 +15,7 @@ export declare type Annotation = Tag & {
     startDuration: duration;
 };
 export declare type VideoAnnotation = Annotation & {};
+export declare type License = RDF.Resource & {};
 export declare type Document = (Resource & (Taggable & MediaObject)) & {};
 export declare type Resource = CreativeWork & {
     topic: Topic[];
@@ -50,6 +48,7 @@ export declare type FieldOfStudy = RDF.Resource & {
     description: string;
     image: ImageObject[];
 };
+export declare type Organization = RDF.Resource & {};
 export declare type CreativeWork = RDF.Resource & {
     name: string;
     description: string;
@@ -64,6 +63,7 @@ export declare type MediaObject = CreativeWork & {
     contentUrl: Thing;
     encodingFormat: string;
 };
+export declare type ImageObject = MediaObject & {};
 export declare type VideoObject = MediaObject & {};
 export declare type Tag = RDF.Resource & {
     tagOf: Taggable;

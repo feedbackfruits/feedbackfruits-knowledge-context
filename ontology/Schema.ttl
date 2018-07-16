@@ -1,5 +1,11 @@
 # This file becomes obsolete once we can load the schema.org ontology into semantic graphql
 
+
+# Organization
+schema:Organization
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
 # CreativeWork
 schema:CreativeWork
   a owl:Class ;
@@ -61,6 +67,11 @@ schema:encodingFormat
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain schema:MediaObject ;
   rdfs:range xsd:string .
+
+# ImageObject
+schema:ImageObject
+  a owl:Class ;
+  rdfs:subClassOf schema:MediaObject .
 
 # VideoObject
 schema:VideoObject
