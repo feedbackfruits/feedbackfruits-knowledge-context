@@ -97,6 +97,10 @@
       }
     },
     {
+      "@vocab": "http://creativecommons.org/ns#",
+      "License": "http://creativecommons.org/ns#License"
+    },
+    {
       "@vocab": "http://schema.org/",
       "MediaObject": "http://schema.org/MediaObject",
       "CreativeWork": "http://schema.org/CreativeWork",
@@ -108,6 +112,7 @@
         "@type": "@id",
         "@container": "@set"
       },
+      "Organization": "http://schema.org/Organization",
       "license": {
         "@id": "http://schema.org/license",
         "@type": "@id",
@@ -132,7 +137,8 @@
         "@id": "http://schema.org/contentUrl",
         "@type": "@id"
       },
-      "encodingFormat": "http://schema.org/encodingFormat"
+      "encodingFormat": "http://schema.org/encodingFormat",
+      "ImageObject": "http://schema.org/ImageObject"
     },
     {
       "@vocab": "http://www.w3.org/2002/07/owl#",

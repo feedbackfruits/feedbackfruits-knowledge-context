@@ -60,6 +60,9 @@ export module iris {
         export const string = "http://www.w3.org/2001/XMLSchema#string";
         export const duration = "http://www.w3.org/2001/XMLSchema#duration";
     };
+    export module cc {
+        export const License = "http://creativecommons.org/ns#License";
+    };
     export module schema {
         export const MediaObject = "http://schema.org/MediaObject";
         export const CreativeWork = "http://schema.org/CreativeWork";
@@ -68,11 +71,11 @@ export module iris {
         export const subjectOf = "http://schema.org/subjectOf";
         export const name = "http://schema.org/name";
         export const description = "http://schema.org/description";
+        export const Organization = "http://schema.org/Organization";
         export const image = "http://schema.org/image";
         export const ImageObject = "http://schema.org/ImageObject";
         export const license = "http://schema.org/license";
         export const sourceOrganization = "http://schema.org/sourceOrganization";
-        export const Organization = "http://schema.org/Organization";
         export const text = "http://schema.org/text";
         export const encoding = "http://schema.org/encoding";
         export const encodesCreativeWork = "http://schema.org/encodesCreativeWork";
@@ -84,9 +87,6 @@ export module iris {
         export const FieldOfStudy = "http://academic.microsoft.com/FieldOfStudy";
         export const parentFieldOfStudy = "http://academic.microsoft.com/parentFieldOfStudy";
         export const childFieldOfStudy = "http://academic.microsoft.com/childFieldOfStudy";
-    };
-    export module cc {
-        export const License = "http://creativecommons.org/ns#License";
     };
     export module oa {
         export const SemanticTag = "http://www.w3.org/ns/oa#SemanticTag";
