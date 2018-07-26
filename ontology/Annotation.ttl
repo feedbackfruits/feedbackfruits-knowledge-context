@@ -23,5 +23,16 @@
 
 :startDuration
   a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:domain :Annotation ;
+  rdfs:domain :VideoAnnotation ;
   rdfs:range xsd:duration .
+
+:DocumentAnnotation
+  a owl:Class ;
+  rdfs:subClassOf :Annotation .
+
+# Should be comma or whitespace separated coordinates
+# See https://github.com/schemaorg/schemaorg/issues/113
+:boundingBox
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :DocumentAnnotation ;
+  rdfs:range xsd:string .

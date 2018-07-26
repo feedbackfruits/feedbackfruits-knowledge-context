@@ -14,11 +14,14 @@ export type Annotation = Tag & {
     startPosition: integer
     confidence: decimal
     detectedAs: string
-    startDuration: duration
 };
 
 export type VideoAnnotation = Annotation & {
+    startDuration: duration
+};
 
+export type DocumentAnnotation = Annotation & {
+    boundingBox: string
 };
 
 export type License = RDF.Resource & {

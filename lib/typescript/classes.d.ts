@@ -12,9 +12,13 @@ export declare type Annotation = Tag & {
     startPosition: integer;
     confidence: decimal;
     detectedAs: string;
+};
+export declare type VideoAnnotation = Annotation & {
     startDuration: duration;
 };
-export declare type VideoAnnotation = Annotation & {};
+export declare type DocumentAnnotation = Annotation & {
+    boundingBox: string;
+};
 export declare type License = RDF.Resource & {};
 export declare type Document = (Resource & (Taggable & MediaObject)) & {};
 export declare type Resource = CreativeWork & {
