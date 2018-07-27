@@ -148,10 +148,7 @@
     },
     {
       "@vocab": "http://academic.microsoft.com/",
-      "fieldLevel": {
-        "@id": "http://academic.microsoft.com/fieldLevel",
-        "@container": "@set"
-      },
+      "fieldLevel": "http://academic.microsoft.com/fieldLevel",
       "parentFieldOfStudy": {
         "@id": "http://academic.microsoft.com/parentFieldOfStudy",
         "@type": "@id",
