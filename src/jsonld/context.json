@@ -148,6 +148,10 @@
     },
     {
       "@vocab": "http://academic.microsoft.com/",
+      "fieldLevel": {
+        "@id": "http://academic.microsoft.com/fieldLevel",
+        "@container": "@set"
+      },
       "parentFieldOfStudy": {
         "@id": "http://academic.microsoft.com/parentFieldOfStudy",
         "@type": "@id",
@@ -155,6 +159,16 @@
       },
       "childFieldOfStudy": {
         "@id": "http://academic.microsoft.com/childFieldOfStudy",
+        "@type": "@id",
+        "@container": "@set"
+      },
+      "relatedFieldOfStudy": {
+        "@id": "http://academic.microsoft.com/relatedFieldOfStudy",
+        "@type": "@id",
+        "@container": "@set"
+      },
+      "relatesToFieldOfStudy": {
+        "@id": "http://academic.microsoft.com/relatesToFieldOfStudy",
         "@type": "@id",
         "@container": "@set"
       },
