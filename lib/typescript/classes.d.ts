@@ -46,7 +46,7 @@ export declare type Entity = RDF.Resource & {
 export declare type FieldOfStudy = RDF.Resource & {
     sameAsEntity: Entity[];
     resource: Resource[];
-    fieldLevel: integer[];
+    fieldLevel: integer;
     parentFieldOfStudy: FieldOfStudy[];
     childFieldOfStudy: FieldOfStudy[];
     relatedFieldOfStudy: FieldOfStudy[];

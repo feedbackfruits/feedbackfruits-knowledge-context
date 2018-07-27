@@ -18,7 +18,7 @@ mag:FieldOfStudy
   owl:inverseOf :topic .
 
 mag:fieldLevel
-  a owl:ObjectProperty ;
+  a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain mag:FieldOfStudy ;
   rdfs:range xsd:integer .
 
