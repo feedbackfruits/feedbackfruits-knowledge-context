@@ -44,8 +44,8 @@
       "duration": "https://knowledge.express/duration",
       "language": "https://knowledge.express/language",
       "VideoCaption": "https://knowledge.express/VideoCaption",
-      "sameAsEntity": {
-        "@id": "https://knowledge.express/sameAsEntity",
+      "sameAsFieldOfStudy": {
+        "@id": "https://knowledge.express/sameAsFieldOfStudy",
         "@type": "@id",
         "@container": "@set"
       },
@@ -55,8 +55,8 @@
         "@container": "@set"
       },
       "Entity": "https://knowledge.express/Entity",
-      "sameAsFieldOfStudy": {
-        "@id": "https://knowledge.express/sameAsFieldOfStudy",
+      "sameAsEntity": {
+        "@id": "https://knowledge.express/sameAsEntity",
         "@type": "@id",
         "@container": "@set"
       },

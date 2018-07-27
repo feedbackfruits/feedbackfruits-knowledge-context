@@ -34,13 +34,13 @@ export declare type VideoCaption = (CreativeWork & Taggable) & {
     language: string;
 };
 export declare type Entity = RDF.Resource & {
-    sameAsEntity: FieldOfStudy[];
+    sameAsFieldOfStudy: FieldOfStudy[];
     subjectOf: Tag[];
     name: string;
     description: string;
 };
 export declare type FieldOfStudy = RDF.Resource & {
-    sameAsFieldOfStudy: Entity[];
+    sameAsEntity: Entity[];
     resource: Resource[];
     parentFieldOfStudy: FieldOfStudy[];
     childFieldOfStudy: FieldOfStudy[];

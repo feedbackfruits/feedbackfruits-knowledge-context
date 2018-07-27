@@ -3,12 +3,12 @@
   rdfs:subClassOf owl:Thing .
 
 # This is temporary until the name clashing with owl:sameAs is fixed
-:sameAsEntity
+:sameAsFieldOfStudy
   a owl:ObjectProperty ;
   rdfs:subPropertyOf owl:sameAs ;
   rdfs:domain :Entity ;
   rdfs:range mag:FieldOfStudy ;
-  owl:inverseOf :sameAsFieldOfStudy .
+  owl:inverseOf :sameAsEntity .
 
 :subjectOf
   a owl:ObjectProperty ;

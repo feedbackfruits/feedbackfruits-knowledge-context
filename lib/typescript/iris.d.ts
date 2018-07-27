@@ -25,8 +25,8 @@ export declare module iris {
         const duration = "https://knowledge.express/duration";
         const language = "https://knowledge.express/language";
         const Entity = "https://knowledge.express/Entity";
-        const sameAsEntity = "https://knowledge.express/sameAsEntity";
         const sameAsFieldOfStudy = "https://knowledge.express/sameAsFieldOfStudy";
+        const sameAsEntity = "https://knowledge.express/sameAsEntity";
         const subjectOf = "https://knowledge.express/subjectOf";
         const about = "https://knowledge.express/about";
         const tagOf = "https://knowledge.express/tagOf";

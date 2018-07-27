@@ -49,14 +49,14 @@ export type VideoCaption = (CreativeWork & Taggable) & {
 };
 
 export type Entity = RDF.Resource & {
-    sameAsEntity: FieldOfStudy[]
+    sameAsFieldOfStudy: FieldOfStudy[]
     subjectOf: Tag[]
     name: string
     description: string
 };
 
 export type FieldOfStudy = RDF.Resource & {
-    sameAsFieldOfStudy: Entity[]
+    sameAsEntity: Entity[]
     resource: Resource[]
     parentFieldOfStudy: FieldOfStudy[]
     childFieldOfStudy: FieldOfStudy[]
