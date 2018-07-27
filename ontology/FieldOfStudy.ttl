@@ -17,6 +17,11 @@ mag:FieldOfStudy
   rdfs:range :Resource ;
   owl:inverseOf :topic .
 
+mag:fieldLevel
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range xsd:integer .
+
 mag:parentFieldOfStudy
   a owl:ObjectProperty ;
   rdfs:domain mag:FieldOfStudy ;
@@ -28,3 +33,15 @@ mag:childFieldOfStudy
   rdfs:domain mag:FieldOfStudy ;
   rdfs:range mag:FieldOfStudy ;
   owl:inverseOf mag:parentFieldOfStudy .
+
+mag:relatedFieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf mag:relatesToFieldOfStudy .
+
+mag:relatesToFieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf mag:relatedFieldOfStudy .

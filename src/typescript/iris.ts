@@ -87,8 +87,11 @@ export module iris {
     };
     export module mag {
         export const FieldOfStudy = "http://academic.microsoft.com/FieldOfStudy";
+        export const fieldLevel = "http://academic.microsoft.com/fieldLevel";
         export const parentFieldOfStudy = "http://academic.microsoft.com/parentFieldOfStudy";
         export const childFieldOfStudy = "http://academic.microsoft.com/childFieldOfStudy";
+        export const relatedFieldOfStudy = "http://academic.microsoft.com/relatedFieldOfStudy";
+        export const relatesToFieldOfStudy = "http://academic.microsoft.com/relatesToFieldOfStudy";
     };
     export module oa {
         export const SemanticTag = "http://www.w3.org/ns/oa#SemanticTag";
