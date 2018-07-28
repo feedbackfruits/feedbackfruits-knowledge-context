@@ -21,7 +21,7 @@ export type VideoAnnotation = Annotation & {
 };
 
 export type DocumentAnnotation = Annotation & {
-    boundingBox: string
+    boundingBox: string[]
 };
 
 export type License = RDF.Resource & {
