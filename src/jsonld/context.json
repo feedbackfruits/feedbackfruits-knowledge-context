@@ -10,7 +10,10 @@
       "VideoAnnotation": "https://knowledge.express/VideoAnnotation",
       "DocumentAnnotation": "https://knowledge.express/DocumentAnnotation",
       "startDuration": "https://knowledge.express/startDuration",
-      "boundingBox": "https://knowledge.express/boundingBox",
+      "boundingBox": {
+        "@id": "https://knowledge.express/boundingBox",
+        "@container": "@set"
+      },
       "Document": "https://knowledge.express/Document",
       "Resource": "https://knowledge.express/Resource",
       "Taggable": "https://knowledge.express/Taggable",

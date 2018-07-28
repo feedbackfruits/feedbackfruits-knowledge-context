@@ -33,6 +33,6 @@
 # Should be comma or whitespace separated coordinates
 # See https://github.com/schemaorg/schemaorg/issues/113
 :boundingBox
-  a owl:ObjectProperty, owl:FunctionalProperty ;
+  a owl:ObjectProperty ;
   rdfs:domain :DocumentAnnotation ;
   rdfs:range xsd:string .
