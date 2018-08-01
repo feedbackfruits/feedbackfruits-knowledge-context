@@ -10,6 +10,7 @@
       "VideoAnnotation": "https://knowledge.express/VideoAnnotation",
       "DocumentAnnotation": "https://knowledge.express/DocumentAnnotation",
       "startDuration": "https://knowledge.express/startDuration",
+      "pageNumber": "https://knowledge.express/pageNumber",
       "boundingBox": {
         "@id": "https://knowledge.express/boundingBox",
         "@container": "@set"

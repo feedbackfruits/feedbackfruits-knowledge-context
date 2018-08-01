@@ -21,6 +21,7 @@ export type VideoAnnotation = Annotation & {
 };
 
 export type DocumentAnnotation = Annotation & {
+    pageNumber: integer
     boundingBox: string[]
 };
 

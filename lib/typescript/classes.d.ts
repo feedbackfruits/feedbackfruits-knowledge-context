@@ -17,6 +17,7 @@ export declare type VideoAnnotation = Annotation & {
     startDuration: duration;
 };
 export declare type DocumentAnnotation = Annotation & {
+    pageNumber: integer;
     boundingBox: string[];
 };
 export declare type License = RDF.Resource & {};

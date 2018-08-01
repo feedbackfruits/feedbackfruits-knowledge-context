@@ -9,6 +9,7 @@ export module iris {
         export const VideoAnnotation = "https://knowledge.express/VideoAnnotation";
         export const startDuration = "https://knowledge.express/startDuration";
         export const DocumentAnnotation = "https://knowledge.express/DocumentAnnotation";
+        export const pageNumber = "https://knowledge.express/pageNumber";
         export const boundingBox = "https://knowledge.express/boundingBox";
         export const Document = "https://knowledge.express/Document";
         export const Resource = "https://knowledge.express/Resource";
