@@ -30,6 +30,11 @@
   a owl:Class ;
   rdfs:subClassOf :Annotation .
 
+:pageNumber
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :DocumentAnnotation ;
+  rdfs:range xsd:integer .
+
 # Should be comma or whitespace separated coordinates
 # See https://github.com/schemaorg/schemaorg/issues/113
 :boundingBox
