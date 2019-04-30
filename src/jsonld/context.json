@@ -36,6 +36,7 @@
       "contentLength": "https://knowledge.express/contentLength",
       "contentDuration": "https://knowledge.express/contentDuration",
       "Video": "https://knowledge.express/Video",
+      "SearchResult": "https://knowledge.express/SearchResult",
       "caption": {
         "@id": "https://knowledge.express/caption",
         "@type": "@id",
@@ -72,6 +73,7 @@
         "@container": "@set"
       },
       "Topic": "https://knowledge.express/Topic",
+      "score": "https://knowledge.express/score",
       "tagOf": {
         "@id": "https://knowledge.express/tagOf",
         "@type": "@id"
@@ -80,7 +82,6 @@
         "@id": "https://knowledge.express/about",
         "@type": "@id"
       },
-      "score": "https://knowledge.express/score",
       "previous": {
         "@id": "https://knowledge.express/previous",
         "@type": "@id",
