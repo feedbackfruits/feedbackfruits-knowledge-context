@@ -73,6 +73,9 @@ export declare type MediaObject = CreativeWork & {
 };
 export declare type ImageObject = MediaObject & {};
 export declare type VideoObject = MediaObject & {};
+export declare type SearchResult = Resource & {
+    score: decimal;
+};
 export declare type Tag = RDF.Resource & {
     tagOf: Taggable;
     about: Entity;

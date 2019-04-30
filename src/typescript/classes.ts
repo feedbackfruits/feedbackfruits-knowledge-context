@@ -100,6 +100,10 @@ export type VideoObject = MediaObject & {
 
 };
 
+export type SearchResult = Resource & {
+    score: decimal
+};
+
 export type Tag = RDF.Resource & {
     tagOf: Taggable
     about: Entity

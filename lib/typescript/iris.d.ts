@@ -32,8 +32,9 @@ export declare module iris {
         const sameAsEntity = "https://knowledge.express/sameAsEntity";
         const subjectOf = "https://knowledge.express/subjectOf";
         const about = "https://knowledge.express/about";
-        const tagOf = "https://knowledge.express/tagOf";
+        const SearchResult = "https://knowledge.express/SearchResult";
         const score = "https://knowledge.express/score";
+        const tagOf = "https://knowledge.express/tagOf";
         const previous = "https://knowledge.express/previous";
         const next = "https://knowledge.express/next";
         const parent = "https://knowledge.express/parent";

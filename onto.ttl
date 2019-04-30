@@ -1,0 +1,401 @@
+
+# The main prefix
+@prefix : <https://knowledge.express/> .
+
+# Prerequisites for basic definition
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Reuse schema.org types. We cannot include the ontology directly yet because of rangeIncludes/domainIncludes
+@prefix schema: <http://schema.org/> .
+
+# We might want to move this into the default prefix
+@prefix mag: <http://academic.microsoft.com/> .
+
+# Annotations
+@prefix oa: <http://www.w3.org/ns/oa#> .
+
+# Licensing. We cannot include this ontology yet (I think) because the localname 'license' would be ambiguous
+@prefix cc: <http://creativecommons.org/ns#> .
+
+# Unused, might be useful in the future for knowledge organisation
+# @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+:Annotation
+  a owl:Class ;
+  rdfs:subClassOf :Tag .
+
+:startPosition
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Annotation ;
+  rdfs:range xsd:integer .
+
+:confidence
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Annotation ;
+  rdfs:range xsd:decimal .
+
+:detectedAs
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Annotation ;
+  rdfs:range xsd:string .
+
+:VideoAnnotation
+  a owl:Class ;
+  rdfs:subClassOf :Annotation .
+
+:startDuration
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :VideoAnnotation ;
+  rdfs:range xsd:duration .
+
+:DocumentAnnotation
+  a owl:Class ;
+  rdfs:subClassOf :Annotation .
+
+:pageNumber
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :DocumentAnnotation ;
+  rdfs:range xsd:integer .
+
+# Should be comma or whitespace separated coordinates
+# See https://github.com/schemaorg/schemaorg/issues/113
+:boundingBox
+  a owl:ObjectProperty ;
+  rdfs:domain :DocumentAnnotation ;
+  rdfs:range xsd:string .
+
+cc:License
+  a owl:Class .
+
+:Document
+  a owl:Class ;
+  rdfs:subClassOf :Resource, :Taggable, schema:MediaObject .
+
+# :section
+#   a owl:ObjectProperty ;
+#   rdfs:domain :Document ;
+#   rdfs:range :DocumentSection ;
+#   owl:inverseOf :sectionOf .
+#
+# :DocumentSection
+#   a owl:Class ;
+#   rdfs:subClassOf schema:MediaObject .
+#
+# :sectionOf
+#   a owl:ObjectProperty ;
+#   rdfs:domain :DocumentSection ;
+#   rdfs:range :Document ;
+#   owl:inverseOf :section .
+#
+# :startPosition
+#   a owl:ObjectProperty, owl:FunctionalProperty ;
+#   rdfs:domain :DocumentSection ;
+#   rdfs:range xsd:integer .
+#
+# :endPosition
+#   a owl:ObjectProperty, owl:FunctionalProperty ;
+#   rdfs:domain :DocumentSection ;
+#   rdfs:range xsd:integer .
+
+:Resource
+  a owl:Class ;
+  rdfs:subClassOf schema:CreativeWork .
+
+:topic
+  a owl:ObjectProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range :Topic ;
+  owl:inverseOf :resource .
+
+:tag
+  a owl:ObjectProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range :Tag ;
+  owl:inverseOf :resource .
+
+:annotation
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf :tag ;
+  rdfs:domain :Resource ;
+  rdfs:range :Annotation ;
+  owl:inverseOf :resource .
+
+:contentLength
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range xsd:integer .
+
+:contentDuration
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Resource ;
+  rdfs:range xsd:duration .
+
+:Video
+  a owl:Class ;
+  rdfs:subClassOf schema:VideoObject, :Resource, :Taggable .
+
+:caption
+  a owl:ObjectProperty ;
+  rdfs:domain :Video ;
+  rdfs:range :VideoCaption ;
+  owl:inverseOf :captionOf .
+
+:VideoCaption
+  a owl:Class ;
+  rdfs:subClassOf schema:CreativeWork, :Taggable .
+
+:captionOf  a
+  owl:ObjectProperty ;
+  rdfs:domain :VideoCaption ;
+  rdfs:range :Video ;
+  owl:inverseOf :caption .
+
+:startsAfter
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :VideoCaption ;
+  rdfs:range xsd:duration .
+
+:duration
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :VideoCaption ;
+  rdfs:range xsd:duration .
+
+:language
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:subPropertyOf schema:inLanguage ;
+  rdfs:domain :VideoCaption ;
+  rdfs:range xsd:string .
+
+:Entity
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+# This is temporary until the name clashing with owl:sameAs is fixed
+:sameAsFieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:sameAs ;
+  rdfs:domain :Entity ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf :sameAsEntity .
+
+:subjectOf
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf schema:subjectOf ;
+  rdfs:domain :Entity ;
+  rdfs:range :Tag ;
+  owl:inverseOf :about .
+
+schema:name
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Entity ;
+  rdfs:range xsd:string .
+
+schema:description
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Entity ;
+  rdfs:range xsd:string .
+
+mag:FieldOfStudy
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+# This is temporary until the name clashing with owl:sameAs is fixed
+
+:sameAsEntity
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf owl:sameAs ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range :Entity ;
+  owl:inverseOf :sameAsFieldOfStudy .
+
+:resource
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range :Resource ;
+  owl:inverseOf :topic .
+
+mag:fieldLevel
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range xsd:integer .
+
+mag:parentFieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf mag:childFieldOfStudy .
+
+mag:childFieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf mag:parentFieldOfStudy .
+
+mag:relatedFieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf mag:relatesToFieldOfStudy .
+
+mag:relatesToFieldOfStudy
+  a owl:ObjectProperty ;
+  rdfs:domain mag:FieldOfStudy ;
+  rdfs:range mag:FieldOfStudy ;
+  owl:inverseOf mag:relatedFieldOfStudy .
+
+# This file becomes obsolete once we can load the schema.org ontology into semantic graphql
+
+
+# Organization
+schema:Organization
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+# CreativeWork
+schema:CreativeWork
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+schema:name
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:CreativeWork, mag:FieldOfStudy ;
+  rdfs:range xsd:string .
+
+schema:description
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:CreativeWork, mag:FieldOfStudy ;
+  rdfs:range xsd:string .
+
+schema:image
+  a owl:ObjectProperty ;
+  rdfs:domain schema:CreativeWork, mag:FieldOfStudy ;
+  rdfs:range schema:ImageObject .
+
+schema:license
+  a owl:ObjectProperty ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:range cc:License .
+
+schema:sourceOrganization
+  a owl:ObjectProperty ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:range schema:Organization .
+
+schema:text
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:range xsd:string .
+
+schema:encoding
+  a owl:ObjectProperty ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:range schema:MediaObject ;
+  owl:inverseOf schema:encodesCreativeWork .
+
+# MediaObject
+schema:MediaObject
+  a owl:Class ;
+  rdfs:subClassOf schema:CreativeWork .
+
+schema:encodesCreativeWork
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:MediaObject ;
+  rdfs:range schema:CreativeWork ;
+  owl:inverseOf schema:encoding .
+
+schema:contentUrl
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:MediaObject ;
+  rdfs:range owl:Thing .
+
+schema:encodingFormat
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:MediaObject ;
+  rdfs:range xsd:string .
+
+# ImageObject
+schema:ImageObject
+  a owl:Class ;
+  rdfs:subClassOf schema:MediaObject .
+
+# VideoObject
+schema:VideoObject
+  a owl:Class ;
+  rdfs:subClassOf schema:MediaObject .
+
+:Tag
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing, oa:SemanticTag .
+
+:tagOf
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Tag ;
+  rdfs:range :Taggable ;
+  owl:inverseOf :tag .
+
+:about
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:subPropertyOf schema:about ;
+  rdfs:domain :Tag ;
+  rdfs:range :Entity ;
+  owl:inverseOf :subjectOf .
+
+:score
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Tag ;
+  rdfs:range xsd:decimal .
+
+:Taggable
+  a owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+:tag
+  a owl:ObjectProperty ;
+  rdfs:domain :Taggable ;
+  rdfs:range :Tag ;
+  owl:inverseOf :subjectOf .
+
+:annotation
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf :tag ;
+  rdfs:domain :Taggable ;
+  rdfs:range :Annotation ;
+  owl:inverseOf :about .
+
+:Topic
+  a owl:Class ;
+  rdfs:subClassOf schema:CreativeWork .
+
+:resource
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Resource ;
+  owl:inverseOf :topic .
+
+:previous
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Topic ;
+  owl:inverseOf :next .
+
+:next
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Topic ;
+  owl:inverseOf :previous .
+
+:parent
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Topic ;
+  owl:inverseOf :child .
+
+:child
+  a owl:ObjectProperty ;
+  rdfs:domain :Topic ;
+  rdfs:range :Topic ;
+  owl:inverseOf :parent .
+

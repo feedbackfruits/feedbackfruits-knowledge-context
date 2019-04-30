@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Class rdf:about="https://knowledge.express/Annotation">
+    <rdfs:subClassOf rdf:resource="https://knowledge.express/Tag"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/startPosition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Annotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/confidence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Annotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/detectedAs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Annotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://knowledge.express/VideoAnnotation">
+    <rdfs:subClassOf rdf:resource="https://knowledge.express/Annotation"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/startDuration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/VideoAnnotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://knowledge.express/DocumentAnnotation">
+    <rdfs:subClassOf rdf:resource="https://knowledge.express/Annotation"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/pageNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/DocumentAnnotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/boundingBox">
+    <rdfs:domain rdf:resource="https://knowledge.express/DocumentAnnotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://creativecommons.org/ns#License">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://knowledge.express/Document">
+    <rdfs:subClassOf rdf:resource="https://knowledge.express/Resource"/>
+    <rdfs:subClassOf rdf:resource="https://knowledge.express/Taggable"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://knowledge.express/Resource">
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/topic">
+    <rdfs:domain rdf:resource="https://knowledge.express/Resource"/>
+    <rdfs:range rdf:resource="https://knowledge.express/Topic"/>
+    <owl:inverseOf rdf:resource="https://knowledge.express/resource"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/tag">
+    <rdfs:domain rdf:resource="https://knowledge.express/Resource"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Taggable"/>
+    <rdfs:range rdf:resource="https://knowledge.express/Tag"/>
+    <owl:inverseOf rdf:resource="https://knowledge.express/resource"/>
+    <owl:inverseOf rdf:resource="https://knowledge.express/subjectOf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/annotation">
+    <rdfs:subPropertyOf rdf:resource="https://knowledge.express/tag"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Resource"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Taggable"/>
+    <rdfs:range rdf:resource="https://knowledge.express/Annotation"/>
+    <owl:inverseOf rdf:resource="https://knowledge.express/resource"/>
+    <owl:inverseOf rdf:resource="https://knowledge.express/about"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/contentLength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/contentDuration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://knowledge.express/Video">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://schema.org/VideoObject">
+        <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf rdf:resource="https://knowledge.express/Resource"/>
+    <rdfs:subClassOf rdf:resource="https://knowledge.express/Taggable"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/caption">
+    <rdfs:domain rdf:resource="https://knowledge.express/Video"/>
+    <rdfs:range rdf:resource="https://knowledge.express/VideoCaption"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://knowledge.express/captionOf">
+        <rdfs:domain rdf:resource="https://knowledge.express/VideoCaption"/>
+        <rdfs:range rdf:resource="https://knowledge.express/Video"/>
+        <owl:inverseOf rdf:resource="https://knowledge.express/caption"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://knowledge.express/VideoCaption">
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:subClassOf rdf:resource="https://knowledge.express/Taggable"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/startsAfter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/VideoCaption"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/duration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/VideoCaption"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/language">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/inLanguage"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/VideoCaption"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://knowledge.express/Entity">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/sameAsFieldOfStudy">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Entity"/>
+    <rdfs:range rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://knowledge.express/sameAsEntity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+        <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+        <rdfs:range rdf:resource="https://knowledge.express/Entity"/>
+        <owl:inverseOf rdf:resource="https://knowledge.express/sameAsFieldOfStudy"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/subjectOf">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/subjectOf"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Entity"/>
+    <rdfs:range rdf:resource="https://knowledge.express/Tag"/>
+    <owl:inverseOf rdf:resource="https://knowledge.express/about"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Entity"/>
+    <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Entity"/>
+    <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://academic.microsoft.com/FieldOfStudy">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/resource">
+    <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Topic"/>
+    <rdfs:range rdf:resource="https://knowledge.express/Resource"/>
+    <owl:inverseOf rdf:resource="https://knowledge.express/topic"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://academic.microsoft.com/fieldLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://academic.microsoft.com/parentFieldOfStudy">
+    <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <rdfs:range rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://academic.microsoft.com/childFieldOfStudy">
+        <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+        <rdfs:range rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+        <owl:inverseOf rdf:resource="http://academic.microsoft.com/parentFieldOfStudy"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://academic.microsoft.com/relatedFieldOfStudy">
+    <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <rdfs:range rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://academic.microsoft.com/relatesToFieldOfStudy">
+        <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+        <rdfs:range rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+        <owl:inverseOf rdf:resource="http://academic.microsoft.com/relatedFieldOfStudy"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://schema.org/Organization">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://schema.org/CreativeWork">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/image">
+    <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:domain rdf:resource="http://academic.microsoft.com/FieldOfStudy"/>
+    <rdfs:range>
+      <owl:Class rdf:about="http://schema.org/ImageObject">
+        <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+      </owl:Class>
+    </rdfs:range>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/license">
+    <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="http://creativecommons.org/ns#License"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/sourceOrganization">
+    <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="http://schema.org/Organization"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/text">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/encoding">
+    <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="http://schema.org/MediaObject"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://schema.org/encodesCreativeWork">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/MediaObject"/>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
+        <owl:inverseOf rdf:resource="http://schema.org/encoding"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://schema.org/MediaObject">
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/contentUrl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://schema.org/encodingFormat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://knowledge.express/Tag">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/oa#SemanticTag"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/tagOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Tag"/>
+    <rdfs:range rdf:resource="https://knowledge.express/Taggable"/>
+    <owl:inverseOf rdf:resource="https://knowledge.express/tag"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/about">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Tag"/>
+    <rdfs:range rdf:resource="https://knowledge.express/Entity"/>
+    <owl:inverseOf rdf:resource="https://knowledge.express/subjectOf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/score">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://knowledge.express/Tag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://knowledge.express/Taggable">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://knowledge.express/Topic">
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/previous">
+    <rdfs:domain rdf:resource="https://knowledge.express/Topic"/>
+    <rdfs:range rdf:resource="https://knowledge.express/Topic"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://knowledge.express/next">
+        <rdfs:domain rdf:resource="https://knowledge.express/Topic"/>
+        <rdfs:range rdf:resource="https://knowledge.express/Topic"/>
+        <owl:inverseOf rdf:resource="https://knowledge.express/previous"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://knowledge.express/parent">
+    <rdfs:domain rdf:resource="https://knowledge.express/Topic"/>
+    <rdfs:range rdf:resource="https://knowledge.express/Topic"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://knowledge.express/child">
+        <rdfs:domain rdf:resource="https://knowledge.express/Topic"/>
+        <rdfs:range rdf:resource="https://knowledge.express/Topic"/>
+        <owl:inverseOf rdf:resource="https://knowledge.express/parent"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+  </owl:ObjectProperty>
+
+</rdf:RDF>
