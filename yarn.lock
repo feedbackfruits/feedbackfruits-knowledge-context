@@ -447,9 +447,10 @@ pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
-rdf-tools@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/rdf-tools/-/rdf-tools-0.4.4.tgz#d0724563474c867ed127fbf724b2fa63f770d85d"
+rdf-tools@^0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/rdf-tools/-/rdf-tools-0.4.5.tgz#5589d244ae68180013611d73819e0dfeee9c2870"
+  integrity sha512-ftT7FemLYAbU/MTMUzFGrVXA3B+VEZW9dTUrefn+if6u8zAOfEl5XaXyCuRcwjid9ofb5ym6lW3Z9eg1lBa6Cw==
   dependencies:
     "@types/globby" "^6.1.0"
     "@types/n3" "^0.0.3"

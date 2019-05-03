@@ -2,6 +2,7 @@
   "@context": [
     {
       "@vocab": "https://knowledge.express/",
+      "@base": "https://knowledge.express/",
       "startPosition": "https://knowledge.express/startPosition",
       "confidence": "https://knowledge.express/confidence",
       "detectedAs": "https://knowledge.express/detectedAs",
@@ -15,6 +16,8 @@
         "@id": "https://knowledge.express/boundingBox",
         "@container": "@set"
       },
+      "numPages": "https://knowledge.express/numPages",
+      "educationalLevel": "https://knowledge.express/educationalLevel",
       "Document": "https://knowledge.express/Document",
       "Resource": "https://knowledge.express/Resource",
       "Taggable": "https://knowledge.express/Taggable",
@@ -36,7 +39,6 @@
       "contentLength": "https://knowledge.express/contentLength",
       "contentDuration": "https://knowledge.express/contentDuration",
       "Video": "https://knowledge.express/Video",
-      "SearchResult": "https://knowledge.express/SearchResult",
       "caption": {
         "@id": "https://knowledge.express/caption",
         "@type": "@id",
@@ -73,7 +75,12 @@
         "@container": "@set"
       },
       "Topic": "https://knowledge.express/Topic",
+      "result": {
+        "@id": "https://knowledge.express/result",
+        "@type": "@id"
+      },
       "score": "https://knowledge.express/score",
+      "SearchResult": "https://knowledge.express/SearchResult",
       "tagOf": {
         "@id": "https://knowledge.express/tagOf",
         "@type": "@id"
@@ -130,10 +137,19 @@
         "@type": "@id",
         "@container": "@set"
       },
+      "author": {
+        "@id": "http://schema.org/author",
+        "@type": "@id",
+        "@container": "@set"
+      },
       "text": "http://schema.org/text",
       "encoding": {
         "@id": "http://schema.org/encoding",
         "@type": "@id",
+        "@container": "@set"
+      },
+      "inLanguage": {
+        "@id": "http://schema.org/inLanguage",
         "@container": "@set"
       },
       "encodesCreativeWork": {
@@ -145,7 +161,8 @@
         "@type": "@id"
       },
       "encodingFormat": "http://schema.org/encodingFormat",
-      "ImageObject": "http://schema.org/ImageObject"
+      "ImageObject": "http://schema.org/ImageObject",
+      "Person": "http://schema.org/Person"
     },
     {
       "@vocab": "http://www.w3.org/2002/07/owl#",

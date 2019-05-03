@@ -30,7 +30,8 @@ export type License = RDF.Resource & {
 };
 
 export type Document = (Resource & (Taggable & MediaObject)) & {
-
+    numPages: integer
+    educationalLevel: string
 };
 
 export type Resource = CreativeWork & {
@@ -82,8 +83,10 @@ export type CreativeWork = RDF.Resource & {
     image: ImageObject[]
     license: License[]
     sourceOrganization: Organization[]
+    author: Person[]
     text: string
     encoding: MediaObject[]
+    inLanguage: string[]
 };
 
 export type MediaObject = CreativeWork & {
@@ -100,7 +103,12 @@ export type VideoObject = MediaObject & {
 
 };
 
-export type SearchResult = Resource & {
+export type Person = RDF.Resource & {
+
+};
+
+export type SearchResult = RDF.Resource & {
+    result: Resource
     score: decimal
 };
 

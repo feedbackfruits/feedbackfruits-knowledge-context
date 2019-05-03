@@ -21,7 +21,10 @@ export declare type DocumentAnnotation = Annotation & {
     boundingBox: string[];
 };
 export declare type License = RDF.Resource & {};
-export declare type Document = (Resource & (Taggable & MediaObject)) & {};
+export declare type Document = (Resource & (Taggable & MediaObject)) & {
+    numPages: integer;
+    educationalLevel: string;
+};
 export declare type Resource = CreativeWork & {
     topic: Topic[];
     tag: Tag[];
@@ -63,8 +66,10 @@ export declare type CreativeWork = RDF.Resource & {
     image: ImageObject[];
     license: License[];
     sourceOrganization: Organization[];
+    author: Person[];
     text: string;
     encoding: MediaObject[];
+    inLanguage: string[];
 };
 export declare type MediaObject = CreativeWork & {
     encodesCreativeWork: CreativeWork;
@@ -73,7 +78,9 @@ export declare type MediaObject = CreativeWork & {
 };
 export declare type ImageObject = MediaObject & {};
 export declare type VideoObject = MediaObject & {};
-export declare type SearchResult = Resource & {
+export declare type Person = RDF.Resource & {};
+export declare type SearchResult = RDF.Resource & {
+    result: Resource;
     score: decimal;
 };
 export declare type Tag = RDF.Resource & {

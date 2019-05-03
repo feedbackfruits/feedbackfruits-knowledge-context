@@ -36,6 +36,11 @@ schema:sourceOrganization
   rdfs:domain schema:CreativeWork ;
   rdfs:range schema:Organization .
 
+schema:author
+  a owl:ObjectProperty ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:range schema:Person .
+
 schema:text
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain schema:CreativeWork ;
@@ -45,6 +50,12 @@ schema:encoding
   a owl:ObjectProperty ;
   rdfs:domain schema:CreativeWork ;
   rdfs:range schema:MediaObject ;
+  owl:inverseOf schema:encodesCreativeWork .
+
+schema:inLanguage
+  a owl:ObjectProperty ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:range xsd:string ;
   owl:inverseOf schema:encodesCreativeWork .
 
 # MediaObject
@@ -77,3 +88,7 @@ schema:ImageObject
 schema:VideoObject
   a owl:Class ;
   rdfs:subClassOf schema:MediaObject .
+
+schema:Person
+  a owl:Class ;
+  rdf:subClassOf owl:Thing .

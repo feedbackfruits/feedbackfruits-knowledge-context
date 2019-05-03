@@ -13,6 +13,7 @@ export declare module iris {
         const Document = "https://knowledge.express/Document";
         const Resource = "https://knowledge.express/Resource";
         const Taggable = "https://knowledge.express/Taggable";
+        const numPages = "https://knowledge.express/numPages";
         const topic = "https://knowledge.express/topic";
         const Topic = "https://knowledge.express/Topic";
         const resource = "https://knowledge.express/resource";
@@ -20,6 +21,7 @@ export declare module iris {
         const annotation = "https://knowledge.express/annotation";
         const contentLength = "https://knowledge.express/contentLength";
         const contentDuration = "https://knowledge.express/contentDuration";
+        const educationalLevel = "https://knowledge.express/educationalLevel";
         const Video = "https://knowledge.express/Video";
         const caption = "https://knowledge.express/caption";
         const VideoCaption = "https://knowledge.express/VideoCaption";
@@ -33,6 +35,7 @@ export declare module iris {
         const subjectOf = "https://knowledge.express/subjectOf";
         const about = "https://knowledge.express/about";
         const SearchResult = "https://knowledge.express/SearchResult";
+        const result = "https://knowledge.express/result";
         const score = "https://knowledge.express/score";
         const tagOf = "https://knowledge.express/tagOf";
         const previous = "https://knowledge.express/previous";
@@ -42,6 +45,7 @@ export declare module iris {
     }
     module rdf {
         const type = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
+        const subClassOf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#subClassOf";
     }
     module owl {
         const Class = "http://www.w3.org/2002/07/owl#Class";
@@ -79,6 +83,8 @@ export declare module iris {
         const ImageObject = "http://schema.org/ImageObject";
         const license = "http://schema.org/license";
         const sourceOrganization = "http://schema.org/sourceOrganization";
+        const author = "http://schema.org/author";
+        const Person = "http://schema.org/Person";
         const text = "http://schema.org/text";
         const encoding = "http://schema.org/encoding";
         const encodesCreativeWork = "http://schema.org/encodesCreativeWork";
