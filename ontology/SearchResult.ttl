@@ -1,11 +1,10 @@
 :SearchResult
-  a owl:Class ;
-  rdfs:subClassOf :Resource .
-
-# :result
-#   a owl:ObjectProperty, owl:FunctionalProperty ;
-#   rdfs:domain :SearchResult ;
-#   rdfs:range :Resource.
+  a owl:Class .
+  
+:result
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :SearchResult ;
+  rdfs:range :Resource.
 
 :score
   a owl:ObjectProperty, owl:FunctionalProperty ;

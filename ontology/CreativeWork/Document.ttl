@@ -2,6 +2,11 @@
   a owl:Class ;
   rdfs:subClassOf :Resource, :Taggable, schema:MediaObject .
 
+:numPages
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Document ;
+  rdfs:range xsd:integer .
+
 # :section
 #   a owl:ObjectProperty ;
 #   rdfs:domain :Document ;

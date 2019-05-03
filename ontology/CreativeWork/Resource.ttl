@@ -30,3 +30,9 @@
   a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain :Resource ;
   rdfs:range xsd:duration .
+
+:educationalLevel
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain :Document ;
+  rdfs:range xsd:string .
+

@@ -14,6 +14,7 @@ export module iris {
         export const Document = "https://knowledge.express/Document";
         export const Resource = "https://knowledge.express/Resource";
         export const Taggable = "https://knowledge.express/Taggable";
+        export const numPages = "https://knowledge.express/numPages";
         export const topic = "https://knowledge.express/topic";
         export const Topic = "https://knowledge.express/Topic";
         export const resource = "https://knowledge.express/resource";
@@ -21,6 +22,7 @@ export module iris {
         export const annotation = "https://knowledge.express/annotation";
         export const contentLength = "https://knowledge.express/contentLength";
         export const contentDuration = "https://knowledge.express/contentDuration";
+        export const educationalLevel = "https://knowledge.express/educationalLevel";
         export const Video = "https://knowledge.express/Video";
         export const caption = "https://knowledge.express/caption";
         export const VideoCaption = "https://knowledge.express/VideoCaption";
@@ -34,6 +36,7 @@ export module iris {
         export const subjectOf = "https://knowledge.express/subjectOf";
         export const about = "https://knowledge.express/about";
         export const SearchResult = "https://knowledge.express/SearchResult";
+        export const result = "https://knowledge.express/result";
         export const score = "https://knowledge.express/score";
         export const tagOf = "https://knowledge.express/tagOf";
         export const previous = "https://knowledge.express/previous";
@@ -43,6 +46,7 @@ export module iris {
     };
     export module rdf {
         export const type = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
+        export const subClassOf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#subClassOf";
     };
     export module owl {
         export const Class = "http://www.w3.org/2002/07/owl#Class";
@@ -80,6 +84,8 @@ export module iris {
         export const ImageObject = "http://schema.org/ImageObject";
         export const license = "http://schema.org/license";
         export const sourceOrganization = "http://schema.org/sourceOrganization";
+        export const author = "http://schema.org/author";
+        export const Person = "http://schema.org/Person";
         export const text = "http://schema.org/text";
         export const encoding = "http://schema.org/encoding";
         export const encodesCreativeWork = "http://schema.org/encodesCreativeWork";
