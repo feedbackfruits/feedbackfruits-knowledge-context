@@ -127,6 +127,10 @@
         "@container": "@set"
       },
       "Organization": "http://schema.org/Organization",
+      "keywords": {
+        "@id": "http://schema.org/keywords",
+        "@container": "@set"
+      },
       "license": {
         "@id": "http://schema.org/license",
         "@type": "@id",
@@ -139,7 +143,10 @@
       },
       "author": {
         "@id": "http://schema.org/author",
-        "@type": "@id",
+        "@container": "@set"
+      },
+      "contributor": {
+        "@id": "http://schema.org/contributor",
         "@container": "@set"
       },
       "text": "http://schema.org/text",
@@ -148,10 +155,9 @@
         "@type": "@id",
         "@container": "@set"
       },
-      "inLanguage": {
-        "@id": "http://schema.org/inLanguage",
-        "@container": "@set"
-      },
+      "inLanguage": "http://schema.org/inLanguage",
+      "learningResourceType": "http://schema.org/learningResourceType",
+      "dateCreated": "http://schema.org/dateCreated",
       "encodesCreativeWork": {
         "@id": "http://schema.org/encodesCreativeWork",
         "@type": "@id"
