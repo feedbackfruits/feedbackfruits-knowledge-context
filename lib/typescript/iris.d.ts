@@ -79,17 +79,21 @@ export declare module iris {
         const name = "http://schema.org/name";
         const description = "http://schema.org/description";
         const Organization = "http://schema.org/Organization";
+        const keywords = "http://schema.org/keywords";
         const image = "http://schema.org/image";
         const ImageObject = "http://schema.org/ImageObject";
         const license = "http://schema.org/license";
         const sourceOrganization = "http://schema.org/sourceOrganization";
         const author = "http://schema.org/author";
-        const Person = "http://schema.org/Person";
+        const contributor = "http://schema.org/contributor";
         const text = "http://schema.org/text";
         const encoding = "http://schema.org/encoding";
         const encodesCreativeWork = "http://schema.org/encodesCreativeWork";
+        const learningResourceType = "http://schema.org/learningResourceType";
+        const dateCreated = "http://schema.org/dateCreated";
         const contentUrl = "http://schema.org/contentUrl";
         const encodingFormat = "http://schema.org/encodingFormat";
+        const Person = "http://schema.org/Person";
         const about = "http://schema.org/about";
     }
     module mag {

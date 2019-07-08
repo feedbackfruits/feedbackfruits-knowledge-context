@@ -80,13 +80,17 @@ export type Organization = RDF.Resource & {
 export type CreativeWork = RDF.Resource & {
     name: string
     description: string
+    keywords: string[]
     image: ImageObject[]
     license: License[]
     sourceOrganization: Organization[]
-    author: Person[]
+    author: string[]
+    contributor: string[]
     text: string
     encoding: MediaObject[]
-    inLanguage: string[]
+    inLanguage: string
+    learningResourceType: string
+    dateCreated: string
 };
 
 export type MediaObject = CreativeWork & {

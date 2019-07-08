@@ -21,6 +21,11 @@ schema:description
   rdfs:domain schema:CreativeWork, mag:FieldOfStudy ;
   rdfs:range xsd:string .
 
+schema:keywords
+  a owl:ObjectProperty ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:range xsd:string .
+
 schema:image
   a owl:ObjectProperty ;
   rdfs:domain schema:CreativeWork, mag:FieldOfStudy ;
@@ -39,7 +44,14 @@ schema:sourceOrganization
 schema:author
   a owl:ObjectProperty ;
   rdfs:domain schema:CreativeWork ;
-  rdfs:range schema:Person .
+  # rdfs:range schema:Person .
+  rdfs:range xsd:string .
+
+schema:contributor
+  a owl:ObjectProperty ;
+  rdfs:domain schema:CreativeWork ;
+  # rdfs:range schema:Person .
+  rdfs:range xsd:string .
 
 schema:text
   a owl:ObjectProperty, owl:FunctionalProperty ;
@@ -53,10 +65,20 @@ schema:encoding
   owl:inverseOf schema:encodesCreativeWork .
 
 schema:inLanguage
-  a owl:ObjectProperty ;
+  a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:domain schema:CreativeWork ;
-  rdfs:range xsd:string ;
-  owl:inverseOf schema:encodesCreativeWork .
+  rdfs:range xsd:string .
+
+schema:learningResourceType
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:range xsd:string .
+
+schema:dateCreated
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain schema:CreativeWork ;
+  # rdfs:range xsd:dateTime .
+  rdfs:range xsd:string .
 
 # MediaObject
 schema:MediaObject

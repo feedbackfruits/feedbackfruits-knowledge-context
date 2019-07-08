@@ -80,17 +80,21 @@ export module iris {
         export const name = "http://schema.org/name";
         export const description = "http://schema.org/description";
         export const Organization = "http://schema.org/Organization";
+        export const keywords = "http://schema.org/keywords";
         export const image = "http://schema.org/image";
         export const ImageObject = "http://schema.org/ImageObject";
         export const license = "http://schema.org/license";
         export const sourceOrganization = "http://schema.org/sourceOrganization";
         export const author = "http://schema.org/author";
-        export const Person = "http://schema.org/Person";
+        export const contributor = "http://schema.org/contributor";
         export const text = "http://schema.org/text";
         export const encoding = "http://schema.org/encoding";
         export const encodesCreativeWork = "http://schema.org/encodesCreativeWork";
+        export const learningResourceType = "http://schema.org/learningResourceType";
+        export const dateCreated = "http://schema.org/dateCreated";
         export const contentUrl = "http://schema.org/contentUrl";
         export const encodingFormat = "http://schema.org/encodingFormat";
+        export const Person = "http://schema.org/Person";
         export const about = "http://schema.org/about";
     };
     export module mag {
