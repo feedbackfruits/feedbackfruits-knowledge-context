@@ -8,6 +8,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf lib",
+    "pretest": "npm run clean && npm run generate-from-rdf && tsc --inlineSourceMap",
+    "test": "nyc ava --verbose",
+    "coverage": "codecov",
     "build": "npm run clean && npm run generate-from-rdf && tsc",
     "generate-context": "rdf-to-ts ./ontology > src/ontology.ts",
     "generate-from-rdf": "npm run generate-ts && npm run generate-jsonld",
@@ -28,6 +31,9 @@
   },
   "repository": "git@github.com:feedbackfruits/feedbackfruits-knowledge-context.git",
   "devDependencies": {
+    "ava": "^2.2.0",
+    "codecov": "^3.5.0",
+    "nyc": "^14.1.1",
     "rdf-tools": "^0.5.0"
   }
 }
