@@ -21,13 +21,13 @@
     "lint-fix": "tslint -c tslint.json 'src/**/*.ts' --fix"
   },
   "dependencies": {
-    "@types/node": "^8.0.8",
+    "@types/node": "^12.6.1",
     "recursive-readdir-sync": "^1.0.6",
-    "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
   },
   "repository": "git@github.com:feedbackfruits/feedbackfruits-knowledge-context.git",
   "devDependencies": {
-    "rdf-tools": "^0.4.5"
+    "rdf-tools": "^0.5.0"
   }
 }
