@@ -114,3 +114,8 @@ schema:VideoObject
 schema:Person
   a owl:Class ;
   rdf:subClassOf owl:Thing .
+
+# WegPage
+schema:WebPage
+  a owl:Class ;
+  rdfs:subClassOf schema:CreativeWork .
