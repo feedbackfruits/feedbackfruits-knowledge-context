@@ -39,6 +39,7 @@
       "contentLength": "https://knowledge.express/contentLength",
       "contentDuration": "https://knowledge.express/contentDuration",
       "Video": "https://knowledge.express/Video",
+      "WebPageResource": "https://knowledge.express/WebPageResource",
       "caption": {
         "@id": "https://knowledge.express/caption",
         "@type": "@id",
@@ -119,6 +120,7 @@
       "MediaObject": "http://schema.org/MediaObject",
       "CreativeWork": "http://schema.org/CreativeWork",
       "VideoObject": "http://schema.org/VideoObject",
+      "WebPage": "http://schema.org/WebPage",
       "name": "http://schema.org/name",
       "description": "http://schema.org/description",
       "image": {

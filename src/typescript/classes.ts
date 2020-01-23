@@ -53,6 +53,10 @@ export type VideoCaption = (CreativeWork & Taggable) & {
     language: string
 };
 
+export type WebPageResource = (WebPage & (Resource & Taggable)) & {
+
+};
+
 export type Entity = RDF.Resource & {
     sameAsFieldOfStudy: FieldOfStudy[]
     subjectOf: Tag[]
@@ -108,6 +112,10 @@ export type VideoObject = MediaObject & {
 };
 
 export type Person = RDF.Resource & {
+
+};
+
+export type WebPage = CreativeWork & {
 
 };
 

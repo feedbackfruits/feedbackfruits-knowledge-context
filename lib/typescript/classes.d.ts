@@ -41,6 +41,7 @@ export declare type VideoCaption = (CreativeWork & Taggable) & {
     duration: duration;
     language: string;
 };
+export declare type WebPageResource = (WebPage & (Resource & Taggable)) & {};
 export declare type Entity = RDF.Resource & {
     sameAsFieldOfStudy: FieldOfStudy[];
     subjectOf: Tag[];
@@ -83,6 +84,7 @@ export declare type MediaObject = CreativeWork & {
 export declare type ImageObject = MediaObject & {};
 export declare type VideoObject = MediaObject & {};
 export declare type Person = RDF.Resource & {};
+export declare type WebPage = CreativeWork & {};
 export declare type SearchResult = RDF.Resource & {
     result: Resource;
     score: decimal;

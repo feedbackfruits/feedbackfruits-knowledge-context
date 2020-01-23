@@ -1,0 +1,3 @@
+:WebPageResource
+  a owl:Class ;
+  rdfs:subClassOf schema:WebPage, :Resource, :Taggable .

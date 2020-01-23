@@ -29,6 +29,7 @@ export declare module iris {
         const startsAfter = "https://knowledge.express/startsAfter";
         const duration = "https://knowledge.express/duration";
         const language = "https://knowledge.express/language";
+        const WebPageResource = "https://knowledge.express/WebPageResource";
         const Entity = "https://knowledge.express/Entity";
         const sameAsFieldOfStudy = "https://knowledge.express/sameAsFieldOfStudy";
         const sameAsEntity = "https://knowledge.express/sameAsEntity";
@@ -75,6 +76,7 @@ export declare module iris {
         const CreativeWork = "http://schema.org/CreativeWork";
         const VideoObject = "http://schema.org/VideoObject";
         const inLanguage = "http://schema.org/inLanguage";
+        const WebPage = "http://schema.org/WebPage";
         const subjectOf = "http://schema.org/subjectOf";
         const name = "http://schema.org/name";
         const description = "http://schema.org/description";
